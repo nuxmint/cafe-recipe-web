@@ -489,10 +489,8 @@ async function showRecipe(id) {
 }
 
 function chooseTemperature() {
-  const { variants, steps } = state.recipe;
-  const hasHot = variants.some((v) => v.temperature === "HOT") || steps.HOT.length;
-  const hasIced = variants.some((v) => v.temperature === "ICED") || steps.ICED.length;
-  state.temperature = hasHot || !hasIced ? "HOT" : "ICED";
+  const [first] = usedTemperatures().length ? usedTemperatures() : tabTemperatures();
+  state.temperature = first || "HOT";
 }
 
 function renderPublishedRecipe() {
@@ -590,8 +588,14 @@ function usedTemperatures() {
   return ["HOT", "ICED"].filter((t) => steps[t].length || variants.some((v) => v.temperature === t));
 }
 
+// A photo alone earns a tab, so it can be seen; printing still follows usedTemperatures.
+function tabTemperatures() {
+  const used = usedTemperatures();
+  return ["HOT", "ICED"].filter((t) => used.includes(t) || state.recipe.photos[t]);
+}
+
 function tabs(active) {
-  const shown = PUBLISHED && usedTemperatures().length ? usedTemperatures() : ["HOT", "ICED"];
+  const shown = PUBLISHED && tabTemperatures().length ? tabTemperatures() : ["HOT", "ICED"];
   return h("div", { class: "tabs" }, shown.map((temperature) =>
     h("button", {
       class: `tab ${temperature.toLowerCase()} ${temperature === active ? "active" : ""}`,
