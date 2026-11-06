@@ -148,7 +148,6 @@
     }
    ],
    "photos": {},
-   "photo": null,
    "sizes": {
     "HOT": [
      "Small"
@@ -212,15 +211,17 @@
      ]
     }
    ],
-   "photos": {},
-   "photo": null,
+   "photos": {
+    "HOT": "photos/recipe-2-hot.jpg",
+    "ICED": "photos/recipe-2-iced.jpg"
+   },
    "sizes": {
     "HOT": [],
     "ICED": [
      "Small"
     ]
    },
-   "temperatures": "ICED"
+   "temperatures": "HOT,ICED"
   }
  ]
 }

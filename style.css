@@ -51,6 +51,7 @@ a { color: inherit; }
   border-radius: 10px; background: var(--surface); color: var(--ink); font: inherit; font-weight: 600;
   text-decoration: none; cursor: pointer; transition: background .15s, border-color .15s;
 }
+.button[hidden] { display: none; }
 .button:hover { background: #fbf7f1; border-color: #d6c8b6; }
 .button.primary { background: var(--brand); border-color: var(--brand); color: #fff; }
 .button.primary:hover { background: #643b20; }
@@ -131,8 +132,12 @@ a { color: inherit; }
 .card.is-new { outline: 2.5px solid var(--caramel); outline-offset: 2px; animation: arrive .6s ease-out; }
 @keyframes arrive { from { transform: translateY(10px) scale(.97); opacity: 0; } to { transform: none; opacity: 1; } }
 .art { position: relative; display: flex; align-items: flex-end; justify-content: center; gap: 4px; aspect-ratio: 16 / 10; overflow: hidden; }
-.art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .art svg { height: 86%; width: auto; max-width: 54%; }
+/* Every photo sits whole in the same half-card frame, whatever its own size and shape. */
+.art-photos { gap: 10px; padding: 40px 12px 12px; }
+.art-frame { position: relative; display: flex; flex: 0 0 calc(50% - 5px); height: 100%; align-items: center; justify-content: center; overflow: hidden; border-radius: 10px; background: rgba(255, 255, 255, .92); }
+.art-frame img { position: absolute; inset: 4px; width: calc(100% - 8px); height: calc(100% - 8px); object-fit: contain; }
+.art-frame svg { height: 90%; max-width: 100%; }
 .art-hot { background: linear-gradient(140deg, #f8c39f, #de7238); }
 .art-iced { background: linear-gradient(140deg, #bfe3f6, #3c8ec6); }
 .art-both { background: linear-gradient(112deg, #f3a97a 0 50%, #7dbde3 50% 100%); }
@@ -246,7 +251,7 @@ dialog textarea {
 }
 dialog textarea.dragging { border-color: var(--hot); background: var(--hot-soft); }
 .notice { margin-top: 10px; padding: 10px 12px; border-radius: 10px; background: #fdecea; color: #8c1d18; white-space: pre-wrap; }
-#new-guide { margin-top: 6px; }
+#new-guide, #raw-guide { margin-top: 6px; }
 #raw-text { max-height: 60vh; margin: 12px 0 0; padding: 12px; overflow: auto; border-radius: 10px; background: #f7f3ee; white-space: pre-wrap; }
 .dialog-actions { display: flex; gap: 8px; margin-top: 14px; align-items: center; flex-wrap: wrap; }
 #toast {

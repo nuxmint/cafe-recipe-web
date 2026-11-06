@@ -297,13 +297,20 @@ function recipeSection() {
   ];
 }
 
-function artwork(temperatures, photoUrl) {
+function artFrame(markup, photoUrl) {
+  return h("div", { class: "art-frame" }, photoUrl ? h("img", { src: photoUrl, alt: "" }) : fromMarkup(markup));
+}
+
+function artwork(temperatures, photos = {}) {
   const hot = temperatures.includes("HOT");
   const iced = temperatures.includes("ICED");
   const kind = hot && iced ? "both" : hot ? "hot" : iced ? "iced" : "none";
-  const box = h("div", { class: `art art-${kind}` });
-  if (photoUrl) box.append(h("img", { src: photoUrl, alt: "" }));
-  else if (kind === "iced") box.append(fromMarkup(ICED_ART));
+  const hasPhoto = (hot && photos.HOT) || (iced && photos.ICED);
+  const box = h("div", { class: `art art-${kind} ${hasPhoto ? "art-photos" : ""}` });
+  if (hasPhoto) {
+    if (hot) box.append(artFrame(HOT_ART, photos.HOT));
+    if (iced) box.append(artFrame(ICED_ART, photos.ICED));
+  } else if (kind === "iced") box.append(fromMarkup(ICED_ART));
   else if (kind === "both") box.append(fromMarkup(HOT_ART), fromMarkup(ICED_ART));
   else box.append(fromMarkup(HOT_ART));
   return box;
@@ -345,7 +352,7 @@ function timeAgo(text) {
 
 function card(recipe) {
   const temperatures = temperaturesOf(recipe);
-  const art = artwork(temperatures, recipe.photo);
+  const art = artwork(temperatures, recipe.photos);
   art.append(h("div", { class: "art-tags" }, temperatures.map(temperatureTag)));
   const isNew = recipe.id === state.highlightId;
   if (isNew) art.append(h("span", { class: "new-tag" }, "방금 추가"));
@@ -445,7 +452,19 @@ function wireEditor() {
     newText.classList.remove("dragging");
     if (event.dataTransfer.files[0]) readFile(event.dataTransfer.files[0]);
   });
-  document.getElementById("raw-close").addEventListener("click", () => document.getElementById("raw-dialog").close());
+  const rawDialog = document.getElementById("raw-dialog");
+  const rawGuide = document.getElementById("raw-guide");
+  rawGuide.addEventListener("click", async () => {
+    rawGuide.textContent = await copyGuide();
+  });
+  document.getElementById("raw-close").addEventListener("click", () => rawDialog.close());
+  document.getElementById("raw-edit").addEventListener("click", editRaw);
+  document.getElementById("raw-cancel").addEventListener("click", () => {
+    if (state.recipe.raw_text) setRawEditing(false);
+    else rawDialog.close();
+  });
+  document.getElementById("raw-apply").addEventListener("click", applyRaw);
+  document.getElementById("raw-undo").addEventListener("click", undoRaw);
   document.getElementById("aux-options").replaceChildren(
     ...[
       ...COUNTED_UNITS.flatMap(([one, many]) => [`1 ${one}`, `2 ${many}`, `3 ${many}`]),
@@ -465,11 +484,15 @@ async function showRecipe(id) {
     app.replaceChildren(h("p", { class: "error" }, error.message), h("a", { href: "#/" }, "대시보드로"));
     return;
   }
+  chooseTemperature();
+  renderRecipe();
+}
+
+function chooseTemperature() {
   const { variants, steps } = state.recipe;
   const hasHot = variants.some((v) => v.temperature === "HOT") || steps.HOT.length;
   const hasIced = variants.some((v) => v.temperature === "ICED") || steps.ICED.length;
   state.temperature = hasHot || !hasIced ? "HOT" : "ICED";
-  renderRecipe();
 }
 
 function renderPublishedRecipe() {
@@ -514,7 +537,7 @@ function renderRecipe() {
       h("a", { class: "button", href: "#/" }, icon("back"), "대시보드"),
       h("span", { id: "save-state" }, recipe.md_name ? `저장됨 · recipes/${recipe.md_name}` : ""),
       h("span", { class: "spacer" }),
-      recipe.raw_text ? h("button", { class: "button", onclick: showRaw }, icon("file"), "Gemini 원문") : null,
+      h("button", { class: "button", onclick: showRaw }, icon("file"), "Gemini 원문"),
       h("button", { class: "button", onclick: printRecipe }, icon("printer"), "인쇄/PDF"),
       h("button", { class: "button danger", onclick: deleteRecipe }, icon("trash"), "삭제")),
     h("div", { class: "meta" },
@@ -884,9 +907,67 @@ function unreadPanel() {
   return h("section", { class: "panel" }, h("h3", {}, "서식에 넣지 못한 내용"), h("pre", {}, unread));
 }
 
+function showRawError(message) {
+  const element = document.getElementById("raw-error");
+  element.textContent = message;
+  element.hidden = !message;
+}
+
+function setRawEditing(editing) {
+  const shown = {
+    "raw-editor": editing, "raw-cancel": editing, "raw-apply": editing,
+    "raw-text": !editing, "raw-edit": !editing, "raw-close": !editing,
+    "raw-undo": !editing && state.recipe.can_undo,
+  };
+  Object.entries(shown).forEach(([id, visible]) => { document.getElementById(id).hidden = !visible; });
+  showRawError("");
+}
+
 function showRaw() {
-  document.getElementById("raw-text").textContent = state.recipe.raw_text;
+  const text = state.recipe.raw_text;
+  document.getElementById("raw-text").textContent = text;
+  document.getElementById("raw-input").value = text || "";
+  document.getElementById("raw-guide").textContent = "Gemini에 함께 넣을 양식 안내문 복사";
+  setRawEditing(!text);
   document.getElementById("raw-dialog").showModal();
+}
+
+function editRaw() {
+  document.getElementById("raw-input").value = state.recipe.raw_text;
+  setRawEditing(true);
+}
+
+async function showChanged(recipe) {
+  state.recipe = recipe;
+  chooseTemperature();
+  document.getElementById("raw-dialog").close();
+  renderRecipe();
+  await loadRecipes();
+  renderSidebar(recipe.id);
+}
+
+async function applyRaw() {
+  if (!confirm("재료표와 제조방법을 이 내용으로 바꿀까요? 사진은 그대로 두고, 결과가 이상하면 Gemini 원문 창의 [되돌리기]로 바로 전 상태로 돌아갈 수 있습니다.")) return;
+  await save(); // A pending autosave must land first, or it would overwrite the new sheet.
+  try {
+    const text = document.getElementById("raw-input").value;
+    const recipe = await api(`/api/recipes/${state.recipe.id}/answer`, sendJson("PUT", { text }));
+    await showChanged(recipe);
+    toast(recipe.free_form ? "서식을 다시 채웠습니다. 비어 있는 칸을 확인해 주세요." : "서식을 다시 채웠습니다.");
+  } catch (error) {
+    showRawError(error.message);
+  }
+}
+
+async function undoRaw() {
+  if (!confirm("서식을 다시 채우기 전 상태로 되돌릴까요? 다시 채운 뒤에 직접 고친 내용은 사라집니다.")) return;
+  await save();
+  try {
+    await showChanged(await api(`/api/recipes/${state.recipe.id}/answer/undo`, { method: "POST" }));
+    toast("이전 상태로 되돌렸습니다.");
+  } catch (error) {
+    showRawError(error.message);
+  }
 }
 
 function printRecipe() {
