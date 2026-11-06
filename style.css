@@ -133,9 +133,11 @@ a { color: inherit; }
 @keyframes arrive { from { transform: translateY(10px) scale(.97); opacity: 0; } to { transform: none; opacity: 1; } }
 .art { position: relative; display: flex; align-items: flex-end; justify-content: center; gap: 4px; aspect-ratio: 16 / 10; overflow: hidden; }
 .art svg { height: 86%; width: auto; max-width: 54%; }
-/* Every photo sits whole in the same half-card frame, whatever its own size and shape. */
-.art-photos { gap: 10px; padding: 40px 12px 12px; }
-.art-frame { position: relative; display: flex; flex: 0 0 calc(50% - 5px); height: 100%; align-items: center; justify-content: center; overflow: hidden; border-radius: 10px; background: rgba(255, 255, 255, .92); }
+/* Every photo sits whole in the same half-card frame, whatever its own size and shape.
+   Frames are placed against the card itself: a percent height inside an aspect-ratio box is not safe on the iOS 15 phone. */
+.art-frame { position: absolute; top: 40px; bottom: 12px; left: calc(25% + 8.5px); width: calc(50% - 17px); display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 10px; background: rgba(255, 255, 255, .92); }
+.art-both .art-frame { left: 12px; }
+.art-both .art-frame + .art-frame { left: auto; right: 12px; }
 .art-frame img { position: absolute; inset: 4px; width: calc(100% - 8px); height: calc(100% - 8px); object-fit: contain; }
 .art-frame svg { height: 90%; max-width: 100%; }
 .art-hot { background: linear-gradient(140deg, #f8c39f, #de7238); }

@@ -306,7 +306,7 @@ function artwork(temperatures, photos = {}) {
   const iced = temperatures.includes("ICED");
   const kind = hot && iced ? "both" : hot ? "hot" : iced ? "iced" : "none";
   const hasPhoto = (hot && photos.HOT) || (iced && photos.ICED);
-  const box = h("div", { class: `art art-${kind} ${hasPhoto ? "art-photos" : ""}` });
+  const box = h("div", { class: `art art-${kind}` });
   if (hasPhoto) {
     if (hot) box.append(artFrame(HOT_ART, photos.HOT));
     if (iced) box.append(artFrame(ICED_ART, photos.ICED));

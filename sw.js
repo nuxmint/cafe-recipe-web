@@ -1,11 +1,14 @@
 // Built by publish.py. VERSION is a hash of the site files, so each release replaces the cached shell.
-const VERSION = 'recipe-ef61baddff0f';
+const VERSION = 'recipe-0e9cc0370801';
 const DATA_CACHE = 'recipe-data';
 const SHELL = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest", "icons/icon-180.png", "icons/icon-192.png", "icons/icon-512.png"];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(VERSION).then((cache) => cache.addAll(SHELL)).then(() => self.skipWaiting()),
+    // GitHub Pages lets browsers keep files for 10 minutes, so ask the server or a new version could store old files.
+    caches.open(VERSION)
+      .then((cache) => cache.addAll(SHELL.map((url) => new Request(url, { cache: 'reload' }))))
+      .then(() => self.skipWaiting()),
   );
 });
 
