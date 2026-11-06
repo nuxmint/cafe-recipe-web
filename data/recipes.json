@@ -1,0 +1,49 @@
+{
+ "sizes": {
+  "HOT": [
+   {
+    "size": "Small",
+    "oz": 12.0,
+    "ml": 355.0
+   },
+   {
+    "size": "Medium",
+    "oz": 16.0,
+    "ml": 473.0
+   },
+   {
+    "size": "Large",
+    "oz": 20.0,
+    "ml": 591.0
+   },
+   {
+    "size": "Extra Large",
+    "oz": 24.0,
+    "ml": 710.0
+   }
+  ],
+  "ICED": [
+   {
+    "size": "Small",
+    "oz": 16.0,
+    "ml": 473.0
+   },
+   {
+    "size": "Medium",
+    "oz": 20.0,
+    "ml": 591.0
+   },
+   {
+    "size": "Large",
+    "oz": 24.0,
+    "ml": 710.0
+   },
+   {
+    "size": "Extra Large",
+    "oz": 32.0,
+    "ml": 946.0
+   }
+  ]
+ },
+ "recipes": []
+}
