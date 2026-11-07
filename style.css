@@ -85,6 +85,9 @@ a { color: inherit; }
 }
 .publish-button:hover { background: var(--espresso-2); }
 .publish-button:disabled { opacity: .55; cursor: wait; }
+.quit-button { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 8px; padding: 9px 12px; border: 0; border-radius: 12px; background: none; color: #cdbfb2; font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+.quit-button:hover { background: var(--espresso-2); color: #fff; }
+.quit-page { grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; }
 .side-link.active { background: #46321f; color: #fff; }
 .side-title { margin: 18px 10px 4px; color: var(--cream-soft); font-size: 12px; font-weight: 700; }
 .side-empty { padding: 4px 10px; color: var(--cream-soft); font-size: 13px; }
@@ -134,7 +137,7 @@ a { color: inherit; }
 .art { position: relative; display: flex; align-items: flex-end; justify-content: center; gap: 4px; aspect-ratio: 16 / 10; overflow: hidden; }
 .art svg { height: 86%; width: auto; max-width: 54%; }
 /* Every photo sits whole in the same half-card frame, whatever its own size and shape.
-   Frames are placed against the card itself: a percent height inside an aspect-ratio box is not safe on the iOS 15 phone. */
+   Frames are placed against the card itself, because a grid row inside this aspect-ratio box collapsed to zero height. */
 .art-frame { position: absolute; top: 40px; bottom: 12px; left: calc(25% + 8.5px); width: calc(50% - 17px); display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 10px; background: rgba(255, 255, 255, .92); }
 .art-both .art-frame { left: 12px; }
 .art-both .art-frame + .art-frame { left: auto; right: 12px; }

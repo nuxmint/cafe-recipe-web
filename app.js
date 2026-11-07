@@ -14,7 +14,7 @@ const app = document.getElementById("app");
 const sidebar = document.getElementById("sidebar");
 const state = {
   table: null, guide: "", recipe: null, recipes: [], filter: "all", query: "", highlightId: null,
-  temperature: "HOT", dirty: false, timer: null, queue: Promise.resolve(),
+  temperature: "HOT", dirty: false, saveFailed: false, timer: null, queue: Promise.resolve(),
 };
 
 /* Fixed artwork and icons. These strings are constants, never user text. */
@@ -35,6 +35,7 @@ const ICONS = {
   link: '<path d="M14 4h6v6M20 4l-9 9"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/>',
   file: '<path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5"/>',
   phone: '<rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/>',
+  power: '<path d="M12 3v9"/><path d="M6.5 6.5a8 8 0 1 0 11 0"/>',
 };
 const HOT_ART = `<svg viewBox="0 0 200 130" aria-hidden="true">
   <g fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="4.5" stroke-linecap="round">
@@ -121,11 +122,13 @@ function save() {
       const saved = await api(`/api/recipes/${id}`, {
         method: "PUT", headers: { "Content-Type": "application/json" }, body: snapshot,
       });
+      state.saveFailed = false;
       if (state.recipe && state.recipe.id === id) state.recipe.md_name = saved.md_name;
       if (!state.dirty) setSaveState(`저장됨 · recipes/${saved.md_name}`);
       await loadRecipes();
       if (state.recipe && state.recipe.id === id) renderSidebar(id);
     } catch (error) {
+      state.saveFailed = true;
       setSaveState(`저장 실패: ${error.message}`);
     }
   });
@@ -190,10 +193,10 @@ function sideDot(recipe) {
 function renderSidebar(activeId) {
   const recent = state.recipes.slice(0, RECENT_COUNT);
   const parts = [
-    h("a", { class: "brand", href: "#/" }, h("span", { class: "brand-mark" }, icon("cup")), "레시피 노트"),
+    h("a", { class: "brand", href: "#/" }, h("span", { class: "brand-mark" }, icon("cup")), PUBLISHED ? "Cafe Note" : "Cafe Recipe Note"),
     PUBLISHED ? null : h("button", { class: "new-button", onclick: openNewDialog }, icon("plus"), "새 레시피 작성"),
     h("nav", { class: "side-nav" },
-      h("a", { class: `side-link ${activeId ? "" : "active"}`, href: "#/" }, icon("grid"), "대시보드")),
+      h("a", { class: `side-link ${activeId ? "" : "active"}`, href: "#/" }, icon("grid"), "Dashboard")),
     h("p", { class: "side-title" }, "최근 레시피"),
     h("div", { class: "side-list" }, recent.length
       ? recent.map((recipe) => h("a", {
@@ -201,8 +204,35 @@ function renderSidebar(activeId) {
       }, sideDot(recipe), h("span", { class: "side-name" }, recipe.menu_name || "메뉴명 미확인")))
       : h("p", { class: "side-empty" }, "아직 없습니다")),
     PUBLISHED ? null : h("button", { class: "publish-button", onclick: publishSite }, icon("phone"), "휴대폰에 게시"),
+    PUBLISHED ? null : h("button", { class: "quit-button", onclick: quitApp }, icon("power"), "앱 종료"),
   ];
   sidebar.replaceChildren(...parts.filter(Boolean));
+}
+
+async function quitApp() {
+  if (document.querySelector(".publish-button").disabled) {
+    toast("게시가 끝난 뒤에 종료해 주세요.");
+    return;
+  }
+  await save();
+  if (state.saveFailed) {
+    toast("저장하지 못한 내용이 있어 종료하지 않았습니다. 내용을 확인해 주세요.", 5000);
+    return;
+  }
+  try {
+    await api("/api/quit", { method: "POST" });
+  } catch (error) {
+    // No reply at all means the server is already off, as in a tab left open from earlier.
+    if (!(error instanceof TypeError)) {
+      toast(error.message, 5000);
+      return;
+    }
+  }
+  document.title = "Cafe Recipe Note 종료됨";
+  document.getElementById("toast").classList.remove("show");
+  document.querySelector(".shell").replaceChildren(h("main", { class: "quit-page" },
+    h("h1", {}, "레시피 앱을 종료했습니다"),
+    h("p", { class: "muted" }, "이 탭은 닫으셔도 됩니다. 다시 쓰려면 Cafe Note 앱을 실행하세요.")));
 }
 
 async function publishSite(event) {
@@ -230,12 +260,12 @@ const TILES = [
 ].filter((item) => !PUBLISHED || item.key !== "review");
 
 function renderDashboard() {
-  document.title = PUBLISHED ? "레시피 노트" : "레시피 대시보드";
+  document.title = PUBLISHED ? "Cafe Note" : "Cafe Recipe Dashboard";
   const content = h("div", { class: "content" });
   app.replaceChildren(content);
   if (!state.recipes.length) {
     content.append(
-      h("div", { class: "page-head" }, h("div", {}, h("h1", {}, PUBLISHED ? "레시피 노트" : "대시보드"))),
+      h("div", { class: "page-head" }, h("div", {}, h("h1", {}, PUBLISHED ? "Cafe Note" : "Dashboard"))),
       h("div", { class: "empty" },
         artwork(["HOT", "ICED"]),
         h("h2", {}, PUBLISHED ? "아직 게시된 레시피가 없습니다" : "첫 레시피를 만들어 보세요"),
@@ -254,7 +284,7 @@ function renderDashboard() {
   renderDashboard.paint = paint;
   content.append(
     h("div", { class: "page-head" },
-      h("div", {}, h("h1", {}, PUBLISHED ? "레시피 노트" : "대시보드"),
+      h("div", {}, h("h1", {}, PUBLISHED ? "Cafe Note" : "Dashboard"),
         h("p", { class: "muted" }, PUBLISHED ? "게시한 레시피를 확인하세요" : "저장한 레시피를 한눈에 확인하세요")),
       h("label", { class: "search" }, icon("search"), h("input", {
         type: "search", placeholder: "메뉴명, 채널 검색", "aria-label": "레시피 검색", value: state.query,
@@ -481,7 +511,7 @@ async function showRecipe(id) {
   try {
     state.recipe = await readRecipe(id);
   } catch (error) {
-    app.replaceChildren(h("p", { class: "error" }, error.message), h("a", { href: "#/" }, "대시보드로"));
+    app.replaceChildren(h("p", { class: "error" }, error.message), h("a", { href: "#/" }, "Dashboard"));
     return;
   }
   chooseTemperature();
@@ -532,7 +562,7 @@ function renderRecipe() {
     : null;
   app.replaceChildren(h("div", { class: "recipe-page" },
     h("div", { class: "recipe-head" },
-      h("a", { class: "button", href: "#/" }, icon("back"), "대시보드"),
+      h("a", { class: "button", href: "#/" }, icon("back"), "Dashboard"),
       h("span", { id: "save-state" }, recipe.md_name ? `저장됨 · recipes/${recipe.md_name}` : ""),
       h("span", { class: "spacer" }),
       h("button", { class: "button", onclick: showRaw }, icon("file"), "Gemini 원문"),

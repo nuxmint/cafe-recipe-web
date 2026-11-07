@@ -1,6 +1,6 @@
 {
-  "name": "레시피 노트",
-  "short_name": "레시피 노트",
+  "name": "Cafe Note",
+  "short_name": "Cafe Note",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
