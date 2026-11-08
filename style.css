@@ -118,6 +118,10 @@ a { color: inherit; }
 .kind-option[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
 .kind-count { min-width: 22px; padding: 0 7px; border-radius: 99px; background: #f1e7da; color: var(--brand); font-size: 12px; line-height: 20px; text-align: center; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+/* While searching, results cover menus and preps alike; pressing the faded switch, a tile or a chip ends the search. */
+.is-searching :is(.kind-switch, .tiles, .chips) { opacity: .45; transition: opacity .15s; }
+.is-searching :is(.kind-switch, .tiles, .chips):hover { opacity: .8; }
+.search-section + .search-section { margin-top: 30px; }
 .chip {
   display: inline-flex; align-items: center; gap: 7px; padding: 8px 14px; border: 1.5px solid transparent; border-radius: 99px;
   background: var(--surface); color: var(--ink); font: inherit; font-weight: 700; box-shadow: var(--shadow); cursor: pointer; white-space: nowrap;
@@ -178,6 +182,8 @@ a { color: inherit; }
 .card-body { display: flex; flex: 1; flex-direction: column; gap: 8px; padding: 14px 16px 14px; }
 .card-title { font-size: 16.5px; font-weight: 750; letter-spacing: -.01em; line-height: 1.3; }
 .card-channel { margin-top: -6px; color: var(--ink-soft); font-size: 13px; }
+/* Search found this card through an ingredient only, so say which one. */
+.card-match { margin-top: -4px; overflow: hidden; color: var(--brand); font-size: 13px; font-weight: 600; white-space: nowrap; text-overflow: ellipsis; }
 .size-line { display: flex; align-items: center; gap: 4px; font-size: 12px; }
 .size-line b { width: 34px; font-weight: 700; color: var(--ink-soft); }
 .pip { display: grid; place-items: center; min-width: 25px; height: 21px; padding: 0 4px; border-radius: 6px; background: #f3efe9; color: #a2978b; font-weight: 700; font-size: 11px; }

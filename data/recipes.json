@@ -131,7 +131,13 @@
      "Medium"
     ]
    },
-   "temperatures": "ICED"
+   "temperatures": "ICED",
+   "ingredient_names": [
+    "우유",
+    "황설탕",
+    "미숫가루",
+    "얼음"
+   ]
   },
   {
    "id": 3,
@@ -222,7 +228,12 @@
     "HOT": [],
     "ICED": []
    },
-   "temperatures": "PREP"
+   "temperatures": "PREP",
+   "ingredient_names": [
+    "깔루아",
+    "연유",
+    "(식물성) 휘핑크림"
+   ]
   },
   {
    "id": 5,
@@ -324,7 +335,15 @@
      "Small"
     ]
    },
-   "temperatures": "ICED"
+   "temperatures": "ICED",
+   "ingredient_names": [
+    "초코소스",
+    "에스프레소",
+    "얼음",
+    "우유",
+    "수제크림",
+    "초코 파우더"
+   ]
   },
   {
    "id": 4,
@@ -420,7 +439,15 @@
      "Small"
     ]
    },
-   "temperatures": "ICED"
+   "temperatures": "ICED",
+   "ingredient_names": [
+    "얼음",
+    "설탕시럽",
+    "더치커피 원액",
+    "물",
+    "수제크림",
+    "초코 파우더"
+   ]
   },
   {
    "id": 1,
@@ -550,7 +577,13 @@
      "Small"
     ]
    },
-   "temperatures": "HOT,ICED"
+   "temperatures": "HOT,ICED",
+   "ingredient_names": [
+    "바닐라 시럽",
+    "에스프레소",
+    "우유",
+    "얼음"
+   ]
   },
   {
    "id": 2,
@@ -627,7 +660,13 @@
      "Small"
     ]
    },
-   "temperatures": "HOT,ICED"
+   "temperatures": "HOT,ICED",
+   "ingredient_names": [
+    "얼음",
+    "우유",
+    "달고나",
+    "에스프레소"
+   ]
   }
  ]
 }
