@@ -14,6 +14,8 @@ const app = document.getElementById("app");
 const sidebar = document.getElementById("sidebar");
 // The dashboard shows drinks or prep items. Prep items have no temperature: their one sheet is PREP.
 const KIND_NAMES = { menu: "메뉴", prep: "프렙" };
+// The switch itself is English by the user's choice; headings such as "내 메뉴" keep KIND_NAMES.
+const KIND_LABELS = { menu: "Menu", prep: "Prep" };
 const INFO_FIELDS = [["yield_text", "완성량"], ["storage_method", "보관 방법"], ["storage_period", "보관 기간"]];
 const state = {
   table: null, guides: { menu: "", prep: "" }, categories: [], recipe: null, recipes: [],
@@ -253,17 +255,17 @@ function renderSidebar(activeId) {
   const recent = state.recipes.slice(0, RECENT_COUNT);
   const parts = [
     h("a", { class: "brand", href: "#/" }, h("span", { class: "brand-mark" }, icon("cup")), PUBLISHED ? "Cafe Note" : "Cafe Recipe Note"),
-    PUBLISHED ? null : h("button", { class: "new-button", onclick: openNewDialog }, icon("plus"), "새 레시피 작성"),
+    PUBLISHED ? null : h("button", { class: "new-button", onclick: openNewDialog }, icon("plus"), "New Recipe"),
     h("nav", { class: "side-nav" },
       h("a", { class: `side-link ${activeId ? "" : "active"}`, href: "#/" }, icon("grid"), "Dashboard")),
-    h("p", { class: "side-title" }, "최근 레시피"),
+    h("p", { class: "side-title" }, "Recent Recipes"),
     h("div", { class: "side-list" }, recent.length
       ? recent.map((recipe) => h("a", {
         class: `side-link ${recipe.id === activeId ? "active" : ""}`, href: `#/recipe/${recipe.id}`,
       }, sideDot(recipe), h("span", { class: "side-name" }, recipe.menu_name || (isPrep(recipe) ? "프렙명 미확인" : "메뉴명 미확인"))))
       : h("p", { class: "side-empty" }, "아직 없습니다")),
-    PUBLISHED ? null : h("button", { class: "publish-button", onclick: publishSite }, icon("phone"), "휴대폰에 게시"),
-    PUBLISHED ? null : h("button", { class: "quit-button", onclick: quitApp }, icon("power"), "앱 종료"),
+    PUBLISHED ? null : h("button", { class: "publish-button", onclick: publishSite }, icon("phone"), "Publish to Phone"),
+    PUBLISHED ? null : h("button", { class: "quit-button", onclick: quitApp }, icon("power"), "Quit App"),
   ];
   sidebar.replaceChildren(...parts.filter(Boolean));
 }
@@ -371,7 +373,7 @@ function kindOption(kind) {
       state.category = "all";
       renderDashboard.paint();
     },
-  }, KIND_NAMES[kind], h("span", { class: "kind-count" }, String(ofKind(kind).length)));
+  }, KIND_LABELS[kind], h("span", { class: "kind-count" }, String(ofKind(kind).length)));
 }
 
 // Chips for prep items: every category in order, then the ones still waiting for one.
@@ -531,6 +533,8 @@ const newError = document.getElementById("new-error");
 const newGuide = document.getElementById("new-guide");
 const newPrepGuide = document.getElementById("new-prep-guide");
 const GUIDE_LABELS = { menu: "메뉴 안내문 복사", prep: "프렙 안내문 복사" };
+// Only the new-recipe window is English; the Gemini 원문 window keeps GUIDE_LABELS.
+const NEW_GUIDE_LABELS = { menu: "Copy Menu Prompt", prep: "Copy Prep Prompt" };
 
 function showNewError(message) {
   newError.textContent = message;
@@ -540,8 +544,8 @@ function showNewError(message) {
 function openNewDialog() {
   newText.value = "";
   showNewError("");
-  newGuide.textContent = GUIDE_LABELS.menu;
-  newPrepGuide.textContent = GUIDE_LABELS.prep;
+  newGuide.textContent = NEW_GUIDE_LABELS.menu;
+  newPrepGuide.textContent = NEW_GUIDE_LABELS.prep;
   newDialog.showModal();
 }
 
