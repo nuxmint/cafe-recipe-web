@@ -264,13 +264,62 @@ a { color: inherit; }
   font-size: 11px; font-weight: 750; line-height: 18px; text-decoration: none; white-space: nowrap;
 }
 .prep-link:hover { background: var(--caramel); color: #2a1a10; }
+button.prep-link { border: 0; font-family: inherit; cursor: pointer; }
+/* [+프렙] floats over the name cell on hover, so rows keep their height; a similar prep keeps it in view. */
+.sizes td.name-cell { position: relative; }
+.prep-add {
+  position: absolute; top: 50%; right: 3px; z-index: 1; display: none; padding: 0 7px; transform: translateY(-50%);
+  border: 1px dashed var(--brand); border-radius: 99px; background: #fff; color: var(--brand); box-shadow: 0 1px 4px rgba(50, 30, 15, .16);
+  font: inherit; font-size: 11px; font-weight: 750; line-height: 17px; white-space: nowrap; cursor: pointer;
+}
+.sizes td.name-cell:hover .prep-add, .sizes td.name-cell:focus-within .prep-add { display: inline-block; }
+/* While [+프렙] shows, the name moves aside instead of being covered. */
+.sizes td.name-cell input { transition: padding .12s; }
+.sizes td.name-cell:hover:has(.prep-add:not(.suggested)) input,
+.sizes td.name-cell:focus-within:has(.prep-add:not(.suggested)) input { padding-right: 50px; }
+.prep-add.suggested { position: static; display: inline-block; margin: 0 0 3px; transform: none; border-color: var(--warn); background: var(--warn-soft); color: var(--warn); box-shadow: none; }
+.prep-add:hover, .prep-add.suggested:hover { border-style: solid; border-color: var(--brand); background: var(--brand); color: #fff; }
+.prep-pop {
+  position: absolute; z-index: 20; display: flex; flex-direction: column; gap: 7px; width: 270px; max-height: 360px; padding: 12px;
+  border: 1px solid var(--border); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow-lift);
+}
+.prep-pop input { width: 100%; padding: 7px 10px; border: 1px solid var(--border); border-radius: 9px; background: #fcfaf6; color: var(--ink); font: inherit; }
+.pop-title { font-weight: 750; }
+.pop-note { color: var(--ink-soft); font-size: 12px; }
+.pop-list { display: flex; flex: 1; flex-direction: column; min-height: 0; overflow-y: auto; }
+.pop-group { margin-top: 6px; padding: 0 8px 2px; color: var(--ink-soft); font-size: 11px; font-weight: 750; }
+.pop-item {
+  display: flex; flex-direction: column; align-items: flex-start; padding: 6px 8px; border: 0; border-radius: 8px;
+  background: none; color: var(--ink); font: inherit; font-weight: 650; text-align: left; cursor: pointer;
+}
+.pop-item:hover, .pop-item:focus-visible { background: #f6efe6; }
+.pop-item.danger { color: #b3261e; }
+.pop-item.danger:hover { background: #fdecea; }
+.pop-aliases { color: var(--ink-soft); font-size: 12px; font-weight: 400; }
+.pop-empty { padding: 8px; color: var(--ink-soft); }
+/* Other names: chips to remove on the Mac, one small line under the prep name on the phone and in print. */
+.alias-row { display: grid; grid-template-columns: 26% 74%; border-bottom: 1.5px solid var(--rule); }
+.alias-label { display: flex; align-items: center; justify-content: center; padding: 6px; border-right: 1.5px solid var(--rule); font-weight: 700; }
+.alias-list { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 6px 8px; }
+.alias-chip { display: inline-flex; align-items: center; gap: 1px; padding: 1px 3px 1px 10px; border-radius: 99px; background: #f1e7da; color: var(--brand); font-weight: 700; }
+.alias-remove { display: grid; place-items: center; width: 20px; height: 20px; padding: 0; border: 0; border-radius: 50%; background: none; color: #5b4a3d; font: inherit; font-size: 15px; line-height: 1; cursor: pointer; }
+.alias-remove:hover { background: #fdecea; color: #b3261e; }
+.sheet .alias-input { flex: 1; width: auto; min-width: 150px; padding: 4px 6px; border-radius: 6px; text-align: left; }
+.alias-line { margin-top: 1px; color: var(--ink-soft); font-size: 13px; font-weight: 500; line-height: 1.4; }
 .used-in { margin: 0; padding: 8px 14px 8px 32px; line-height: 1.8; }
 .used-in a { margin-right: 8px; color: var(--brand); font-weight: 700; }
 .used-empty { padding: 10px 14px; }
 .original { color: var(--ink-soft); }
 td.blank, td.blank input { background: var(--blank); }
-.row-delete { border: 0; background: none; padding: 0 4px; color: #a99d91; font: inherit; cursor: pointer; }
-.row-delete:hover { color: #b3261e; }
+/* Row buttons sized to the 14px table text, without circles: + in the brand colour, × dark grey, red only under the pointer. */
+.row-tool {
+  display: inline-grid; place-items: center; width: 18px; height: 18px; padding: 0; border: 0; border-radius: 4px; background: none;
+  vertical-align: middle; font: inherit; font-weight: 700; line-height: 1; cursor: pointer; transition: background .15s, color .15s;
+}
+.row-add { color: var(--brand); font-size: 13px; }
+.row-add:hover { background: #f1e7da; color: #5a3519; }
+.row-delete { color: #4a3b30; font-size: 14px; }
+.row-delete:hover { background: #fdecea; color: #b3261e; }
 .section-bar { padding: 5px; border-top: 1.5px solid var(--rule); border-bottom: 1.5px solid var(--rule); background: var(--head); text-align: center; font-size: 15px; font-weight: 700; }
 .sheet textarea { display: block; min-height: 90px; padding: 8px 10px; overflow: hidden; resize: none; text-align: left; line-height: 1.6; }
 .sheet .sizes textarea { min-height: 0; padding: 3px 4px; text-align: center; line-height: 1.35; }
@@ -339,6 +388,7 @@ html[data-mode="published"] #app {
   html[data-mode="published"] .tile-icon { display: none; }
   html[data-mode="published"] .tile-value { font-size: 22px; }
   html[data-mode="published"] .title-row > div, html[data-mode="published"] .title-row input { font-size: 17px; }
+  html[data-mode="published"] .title-row .alias-line { font-size: 12px; }
   html[data-mode="published"] .sizes { font-size: 13px; }
   html[data-mode="published"] .recipe-page { max-width: none; }
   html[data-mode="published"] .chips { flex-wrap: nowrap; overflow-x: auto; margin: 0 -16px 18px; padding: 2px 16px 6px; scrollbar-width: none; }
@@ -353,7 +403,7 @@ html[data-mode="published"] #app {
 @media print {
   @page { margin: 12mm; }
   html, body { height: auto; background: #fff; font-size: 11px; }
-  .shell, #toast, dialog { display: none !important; }
+  .shell, #toast, dialog, .prep-pop { display: none !important; }
   #print-root { display: block; }
   #print-root .sheet { border-radius: 0; box-shadow: none; break-after: page; }
   #print-root .sheet:last-child { break-after: auto; }
