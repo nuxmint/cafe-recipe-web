@@ -1,5 +1,5 @@
 // Built by publish.py. VERSION is a hash of the site files, so each release replaces the cached shell.
-const VERSION = 'recipe-088f19962ca4';
+const VERSION = 'recipe-e40c2e0c725a';
 const DATA_CACHE = 'recipe-data';
 const SHELL = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest", "icons/icon-180.png", "icons/icon-192.png", "icons/icon-512.png"];
 

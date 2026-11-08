@@ -45,7 +45,105 @@
    }
   ]
  },
+ "categories": [
+  "크림·폼",
+  "시럽",
+  "소스",
+  "과일청·베이스",
+  "페이스트·앙금",
+  "차·커피 농축액",
+  "젤리·펄",
+  "토핑"
+ ],
  "recipes": [
+  {
+   "id": 3,
+   "menu_name": "수제크림",
+   "channel": null,
+   "source_url": null,
+   "memo": null,
+   "steps": {
+    "HOT": [],
+    "ICED": [],
+    "UNKNOWN": [],
+    "PREP": [
+     "믹싱볼에 깔루아, 연유, (식물성)휘핑크림 순으로 을 넣어줍니다.",
+     "휘핑기를 이용해 40-45초 정도 크림을 쳐줍니다.",
+     "- 크림의 농도와 기포제거가 진짜 중요해요",
+     "- 위치를 잘 잡으면 크림이 안튀게 한번에 칠 수 있는데 한번씩 크림이 많이 튈때가 있어요ㅠ",
+     "거품기로 계속 저어서 표면의 기포를 거의 다 빼줍니다.",
+     "- 진짜 중요한 부분입니다! 거품기로 계속 저어서 기포를 거의 다 빼주셔야 됩니다",
+     "- 팔이 아플 정도로 좀 저어주면 기포가 없어지고 부드러운 크림이 되어가는 것이 보입니다!",
+     "- 크림 표면에 기포가 없이 매끈한 상태가 될때까지 저어주세요!",
+     "보관 통에 크림을 담고 바닥에 몇 번 쳐서 잔여 기포를 제거합니다.",
+     "- 완벽한데 기포를 빼기 위해 바닥에 몇 번 쳐줍니다!",
+     "- 기포가 많으면 층이 분리가 잘되고 크림이 매끄럽지 않아서 보기도 안예뻐서 번거롭더라도 꼭 빼주세요!"
+    ]
+   },
+   "updated_at": "2026-11-07T23:34:22",
+   "kind": "prep",
+   "category": "크림·폼",
+   "yield_text": null,
+   "storage_method": null,
+   "storage_period": null,
+   "variants": [
+    {
+     "temperature": "PREP",
+     "size": null,
+     "status": "unset",
+     "label": null,
+     "ingredients": [
+      {
+       "name": "깔루아",
+       "amount": "15 g",
+       "aux": null,
+       "note": null,
+       "prep_id": null
+      },
+      {
+       "name": "연유",
+       "amount": "30 g",
+       "aux": null,
+       "note": null,
+       "prep_id": null
+      },
+      {
+       "name": "(식물성) 휘핑크림",
+       "amount": "500 g",
+       "aux": null,
+       "note": null,
+       "prep_id": null
+      }
+     ]
+    }
+   ],
+   "used_in": [
+    {
+     "id": 4,
+     "menu_name": "아인슈페너",
+     "kind": "menu",
+     "temperature": "ICED",
+     "size": "Small",
+     "amount": null,
+     "aux": "2 scoops"
+    },
+    {
+     "id": 5,
+     "menu_name": "카페모카",
+     "kind": "menu",
+     "temperature": "ICED",
+     "size": "Small",
+     "amount": null,
+     "aux": "2 scoops"
+    }
+   ],
+   "photos": {},
+   "sizes": {
+    "HOT": [],
+    "ICED": []
+   },
+   "temperatures": "PREP"
+  },
   {
    "id": 6,
    "menu_name": "미숫가루",
@@ -63,9 +161,15 @@
      "22온스 아이스컵에 얼음을 가득 채운 뒤, 갈아둔 미숫가루를 부어 완성합니다.",
      "- 좀 더 차갑게 드시려면 얼음 좀 빼고 드시면 됩니다."
     ],
-    "UNKNOWN": []
+    "UNKNOWN": [],
+    "PREP": []
    },
    "updated_at": "2026-11-06T22:14:38",
+   "kind": "menu",
+   "category": null,
+   "yield_text": null,
+   "storage_method": null,
+   "storage_period": null,
    "variants": [
     {
      "temperature": "ICED",
@@ -77,29 +181,34 @@
        "name": "우유",
        "amount": "250 ml",
        "aux": null,
-       "note": null
+       "note": null,
+       "prep_id": null
       },
       {
        "name": "황설탕",
        "amount": "30 g",
        "aux": "1 spoon",
-       "note": "달기 조절은 취향에 맞게 설탕으로 조절"
+       "note": "달기 조절은 취향에 맞게 설탕으로 조절",
+       "prep_id": null
       },
       {
        "name": "미숫가루",
        "amount": "50 g",
        "aux": "2 spoons",
-       "note": "국산곡물 100%"
+       "note": "국산곡물 100%",
+       "prep_id": null
       },
       {
        "name": "얼음",
        "amount": null,
        "aux": null,
-       "note": "가득 채움"
+       "note": "가득 채움",
+       "prep_id": null
       }
      ]
     }
    ],
+   "used_in": [],
    "photos": {
     "ICED": "photos/recipe-6-iced.jpg"
    },
@@ -132,9 +241,15 @@
      "- 수제크림 올려서 마무리 :) 두국자 정도 넣어주시면 딱 좋아요!",
      "- 초코 파우더 뿌려서 마무리 :) 더 단맛을 원하신다면 초코 소스를 드리블해 주시면 됩니다!"
     ],
-    "UNKNOWN": []
+    "UNKNOWN": [],
+    "PREP": []
    },
    "updated_at": "2026-11-06T22:08:15",
+   "kind": "menu",
+   "category": null,
+   "yield_text": null,
+   "storage_method": null,
+   "storage_period": null,
    "variants": [
     {
      "temperature": "ICED",
@@ -146,47 +261,55 @@
        "name": "초코소스",
        "amount": "40 g",
        "aux": "3 pumps",
-       "note": "기라델리 초코소스"
+       "note": "기라델리 초코소스",
+       "prep_id": null
       },
       {
        "name": "에스프레소",
        "amount": null,
        "aux": "2 shots",
-       "note": "소스 위에 바로 추출"
+       "note": "소스 위에 바로 추출",
+       "prep_id": null
       },
       {
        "name": "얼음",
        "amount": null,
        "aux": null,
-       "note": "컵의 2/3 정도"
+       "note": "컵의 2/3 정도",
+       "prep_id": null
       },
       {
        "name": "우유",
        "amount": "175 ml",
        "aux": null,
-       "note": "서울우유"
+       "note": "서울우유",
+       "prep_id": null
       },
       {
        "name": "수제크림",
        "amount": null,
        "aux": "2 scoops",
-       "note": "두국자 정도"
+       "note": "두국자 정도",
+       "prep_id": 3
       },
       {
        "name": "초코 파우더",
        "amount": null,
        "aux": null,
-       "note": "마무리용"
+       "note": "마무리용",
+       "prep_id": null
       },
       {
        "name": "초코 소스",
        "amount": null,
        "aux": null,
-       "note": "더 단맛 원할 때 드리블"
+       "note": "더 단맛 원할 때 드리블",
+       "prep_id": null
       }
      ]
     }
    ],
+   "used_in": [],
    "photos": {
     "ICED": "photos/recipe-5-iced.jpg"
    },
@@ -197,79 +320,6 @@
     ]
    },
    "temperatures": "ICED"
-  },
-  {
-   "id": 3,
-   "menu_name": "수제크림",
-   "channel": null,
-   "source_url": null,
-   "memo": null,
-   "steps": {
-    "HOT": [
-     "믹싱볼에 깔루아, 연유, (식물성)휘핑크림 순으로 을 넣어줍니다.",
-     "휘핑기를 이용해 40-45초 정도 크림을 쳐줍니다.",
-     "- 크림의 농도와 기포제거가 진짜 중요해요",
-     "- 위치를 잘 잡으면 크림이 안튀게 한번에 칠 수 있는데 한번씩 크림이 많이 튈때가 있어요ㅠ",
-     "거품기로 계속 저어서 표면의 기포를 거의 다 빼줍니다.",
-     "- 진짜 중요한 부분입니다! 거품기로 계속 저어서 기포를 거의 다 빼주셔야 됩니다",
-     "- 팔이 아플 정도로 좀 저어주면 기포가 없어지고 부드러운 크림이 되어가는 것이 보입니다!",
-     "- 크림 표면에 기포가 없이 매끈한 상태가 될때까지 저어주세요!",
-     "보관 통에 크림을 담고 바닥에 몇 번 쳐서 잔여 기포를 제거합니다.",
-     "- 완벽한데 기포를 빼기 위해 바닥에 몇 번 쳐줍니다!",
-     "- 기포가 많으면 층이 분리가 잘되고 크림이 매끄럽지 않아서 보기도 안예뻐서 번거롭더라도 꼭 빼주세요!"
-    ],
-    "ICED": [
-     "믹싱볼에 깔루아, 연유, 휘핑크림을 넣어줍니다.",
-     "휘핑기를 이용해 40-45초 정도 크림을 쳐줍니다.",
-     "- 크림의 농도와 기포제거가 진짜 중요해요",
-     "- 위치를 잘 잡으면 크림이 안튀게 한번에 칠 수 있는데 한번씩 크림이 많이 튈때가 있어요ㅠ",
-     "거품기로 계속 저어서 표면의 기포를 거의 다 빼줍니다.",
-     "- 진짜 중요한 부분입니다! 거품기로 계속 저어서 기포를 거의 다 빼주셔야 됩니다",
-     "- 팔이 아플 정도로 좀 저어주면 기포가 없어지고 부드러운 크림이 되어가는 것이 보입니다!",
-     "- 크림 표면에 기포가 없이 매끈한 상태가 될때까지 저어주세요!",
-     "보관 통에 크림을 담고 바닥에 몇 번 쳐서 잔여 기포를 제거합니다.",
-     "- 완벽한데 기포를 빼기 위해 바닥에 몇 번 쳐줍니다!",
-     "- 기포가 많으면 층이 분리가 잘되고 크림이 매끄럽지 않아서 보기도 안예뻐서 번거롭더라도 꼭 빼주세요!"
-    ],
-    "UNKNOWN": []
-   },
-   "updated_at": "2026-11-06T22:06:40",
-   "variants": [
-    {
-     "temperature": "HOT",
-     "size": "Small",
-     "status": "confirmed",
-     "label": null,
-     "ingredients": [
-      {
-       "name": "깔루아",
-       "amount": "15 g",
-       "aux": null,
-       "note": null
-      },
-      {
-       "name": "연유",
-       "amount": "30 g",
-       "aux": null,
-       "note": null
-      },
-      {
-       "name": "(식물성) 휘핑크림",
-       "amount": "500 g",
-       "aux": null,
-       "note": null
-      }
-     ]
-    }
-   ],
-   "photos": {},
-   "sizes": {
-    "HOT": [
-     "Small"
-    ],
-    "ICED": []
-   },
-   "temperatures": "HOT,ICED"
   },
   {
    "id": 4,
@@ -293,9 +343,15 @@
      "초코 파우더를 살짝만 뿌려 마무리합니다.",
      "- 초코 파우더 살짝만 뿌려주시면 진짜 끝!"
     ],
-    "UNKNOWN": []
+    "UNKNOWN": [],
+    "PREP": []
    },
    "updated_at": "2026-11-06T21:52:57",
+   "kind": "menu",
+   "category": null,
+   "yield_text": null,
+   "storage_method": null,
+   "storage_period": null,
    "variants": [
     {
      "temperature": "ICED",
@@ -307,41 +363,48 @@
        "name": "얼음",
        "amount": null,
        "aux": null,
-       "note": "2/3만 채우기"
+       "note": "2/3만 채우기",
+       "prep_id": null
       },
       {
        "name": "설탕시럽",
        "amount": null,
        "aux": null,
-       "note": "아주 조금"
+       "note": "아주 조금",
+       "prep_id": null
       },
       {
        "name": "더치커피 원액",
        "amount": "70 ml",
        "aux": null,
-       "note": "디카페인 또는 일반 중 선택"
+       "note": "디카페인 또는 일반 중 선택",
+       "prep_id": null
       },
       {
        "name": "물",
        "amount": "70 ml",
        "aux": null,
-       "note": null
+       "note": null,
+       "prep_id": null
       },
       {
        "name": "수제크림",
        "amount": null,
        "aux": "2 scoops",
-       "note": "2국자"
+       "note": "2국자",
+       "prep_id": 3
       },
       {
        "name": "초코 파우더",
        "amount": null,
        "aux": null,
-       "note": "살짝만 뿌리기"
+       "note": "살짝만 뿌리기",
+       "prep_id": null
       }
      ]
     }
    ],
+   "used_in": [],
    "photos": {
     "ICED": "photos/recipe-4-iced.jpg"
    },
@@ -391,9 +454,15 @@
      "- 샷 대신 잔에 시럽을 넣고 샷을 추출해도 됩니다!",
      "- 라떼와 다르게 시럽이 무거워 층이 지지 않고 금방 가라앉아요!"
     ],
-    "UNKNOWN": []
+    "UNKNOWN": [],
+    "PREP": []
    },
    "updated_at": "2026-11-05T19:14:01",
+   "kind": "menu",
+   "category": null,
+   "yield_text": null,
+   "storage_method": null,
+   "storage_period": null,
    "variants": [
     {
      "temperature": "HOT",
@@ -405,19 +474,22 @@
        "name": "바닐라 시럽",
        "amount": "20 ml",
        "aux": "2 pumps",
-       "note": "기호에 따라 조절"
+       "note": "기호에 따라 조절",
+       "prep_id": null
       },
       {
        "name": "에스프레소",
        "amount": null,
        "aux": "2 shots",
-       "note": "투샷 추출"
+       "note": "투샷 추출",
+       "prep_id": null
       },
       {
        "name": "우유",
        "amount": null,
        "aux": null,
-       "note": "벨벳 밀크 스팀"
+       "note": "벨벳 밀크 스팀",
+       "prep_id": null
       }
      ]
     },
@@ -431,29 +503,34 @@
        "name": "얼음",
        "amount": null,
        "aux": null,
-       "note": "잔에 가득 채움"
+       "note": "잔에 가득 채움",
+       "prep_id": null
       },
       {
        "name": "바닐라 시럽",
        "amount": "20 ml",
        "aux": "2 pumps",
-       "note": "원두가 강하면 3 pumps(30ml)"
+       "note": "원두가 강하면 3 pumps(30ml)",
+       "prep_id": null
       },
       {
        "name": "에스프레소",
        "amount": null,
        "aux": "2 shots",
-       "note": "투샷 추출"
+       "note": "투샷 추출",
+       "prep_id": null
       },
       {
        "name": "우유",
        "amount": null,
        "aux": null,
-       "note": "밀크 마스터 우유 사용"
+       "note": "밀크 마스터 우유 사용",
+       "prep_id": null
       }
      ]
     }
    ],
+   "used_in": [],
    "photos": {
     "HOT": "photos/recipe-1-hot.jpg",
     "ICED": "photos/recipe-1-iced.jpg"
@@ -484,9 +561,15 @@
      "(달고나 커피의 경우) 에스프레소를 가장자리에 부어준다.",
      "- 에스프레소를 달고나 위에 직접 부으면 금방 녹아 비주얼이 나빠지므로 가장자리로 흘려 부어줍니다."
     ],
-    "UNKNOWN": []
+    "UNKNOWN": [],
+    "PREP": []
    },
    "updated_at": "2026-11-05T18:47:38",
+   "kind": "menu",
+   "category": null,
+   "yield_text": null,
+   "storage_method": null,
+   "storage_period": null,
    "variants": [
     {
      "temperature": "ICED",
@@ -498,29 +581,34 @@
        "name": "얼음",
        "amount": "150g",
        "aux": null,
-       "note": "잔에 채움"
+       "note": "잔에 채움",
+       "prep_id": null
       },
       {
        "name": "우유",
        "amount": "200ml",
        "aux": null,
-       "note": "일반 우유 사용 (원작 카페는 멸균우유 사용)"
+       "note": "일반 우유 사용 (원작 카페는 멸균우유 사용)",
+       "prep_id": null
       },
       {
        "name": "달고나",
        "amount": "30g",
        "aux": null,
-       "note": "가루 위주와 굵은 조각 혼합 토핑"
+       "note": "가루 위주와 굵은 조각 혼합 토핑",
+       "prep_id": null
       },
       {
        "name": "에스프레소",
        "amount": "30ml (1oz)",
        "aux": "1 shot",
-       "note": "달고나 커피 제조 시 1 shot 추가"
+       "note": "달고나 커피 제조 시 1 shot 추가",
+       "prep_id": null
       }
      ]
     }
    ],
+   "used_in": [],
    "photos": {
     "HOT": "photos/recipe-2-hot.jpg",
     "ICED": "photos/recipe-2-iced.jpg"
