@@ -57,6 +57,188 @@
  ],
  "recipes": [
   {
+   "id": 8,
+   "menu_name": "흑임자라떼",
+   "channel": "커픽처스 coffictures",
+   "source_url": "https://youtu.be/Eh-IPC-Ni4Q",
+   "memo": "- 도구: 저울, 계량컵, 거품기(또는 핸드믹서), 유리잔\n- 추가 정보: 빨대를 사용하기보다 아이슈페너처럼 컵째로 마시는 것이 더 맛있습니다.",
+   "steps": {
+    "HOT": [],
+    "ICED": [
+     "계량컵에 생크림 100ml를 넣습니다.",
+     "- 생크림이나 동물성 휘핑크림 둘 중 하나를 사용합니다.",
+     "설탕시럽 20g을 넣습니다.",
+     "- 단것을 좋아하시는 분은 시럽을 30에서 40ml 넣어주세요.",
+     "흑임자 페이스트 15g을 넣습니다.",
+     "- 흑임자 페이스트 대신에 흑임자 가루를 사용하셔도 됩니다.",
+     "거품기(또는 수량이 많을 때는 핸드믹서)로 섞어 흑임자 크림을 만듭니다.",
+     "- 수량이 많을 때는 핸드믹서를 사용하면 편해요.",
+     "- 농도 조절이 중요해요! 요플레 같은 정도보다 약간 무른 정도로 쳐줍니다.",
+     "컵에 얼음 150g을 담습니다.",
+     "우유 150g을 담습니다.",
+     "만들어둔 흑임자 크림을 컵에 붓습니다.",
+     "에스프레소 2샷을 위에 부어 완성합니다."
+    ],
+    "UNKNOWN": [],
+    "PREP": []
+   },
+   "updated_at": "2026-11-08T21:35:16",
+   "kind": "menu",
+   "category": null,
+   "yield_text": null,
+   "storage_method": null,
+   "storage_period": null,
+   "aliases": [],
+   "variants": [
+    {
+     "temperature": "ICED",
+     "size": "Small",
+     "status": "suggested",
+     "label": "14 oz",
+     "ingredients": [
+      {
+       "name": "생크림",
+       "amount": "100 ml",
+       "aux": null,
+       "note": "생크림이나 동물성 휘핑크림 둘 중 선택",
+       "prep_id": null
+      },
+      {
+       "name": "설탕시럽",
+       "amount": "20 g",
+       "aux": null,
+       "note": "단물을 좋아하시는 분은 30에서 40g으로 조절 가능",
+       "prep_id": null
+      },
+      {
+       "name": "흑임자 페이스트",
+       "amount": "15 g",
+       "aux": null,
+       "note": "흑임자 가루로 대체 가능",
+       "prep_id": 7
+      },
+      {
+       "name": "얼음",
+       "amount": "150 g",
+       "aux": null,
+       "note": null,
+       "prep_id": null
+      },
+      {
+       "name": "우유",
+       "amount": "150 g",
+       "aux": null,
+       "note": null,
+       "prep_id": null
+      },
+      {
+       "name": "에스프레소",
+       "amount": "2 shots",
+       "aux": "36 ml",
+       "note": null,
+       "prep_id": null
+      }
+     ]
+    }
+   ],
+   "used_in": [],
+   "photos": {
+    "ICED": "photos/recipe-8-iced.jpg"
+   },
+   "sizes": {
+    "HOT": [],
+    "ICED": [
+     "Small"
+    ]
+   },
+   "temperatures": "ICED",
+   "ingredient_names": [
+    "생크림",
+    "설탕시럽",
+    "흑임자 페이스트",
+    "얼음",
+    "우유",
+    "에스프레소"
+   ]
+  },
+  {
+   "id": 7,
+   "menu_name": "흑임자 페이스트",
+   "channel": "헤븐리오븐",
+   "source_url": "https://youtu.be/OJvNg94aAws",
+   "memo": "- 사용 도구: 계량 저울, 계량컵, 핸드블렌더, 미니 스패출러(알뜰 주걱), 유리 밀폐 용기, 랩\n- 흑임자는 지방이 많은 식재료이므로 산패하기 쉬우므로 밀폐와 보관 기간 준수가 중요합니다.\n- 흑임자는 약불로 볶아준다.",
+   "steps": {
+    "HOT": [],
+    "ICED": [],
+    "UNKNOWN": [],
+    "PREP": [
+     "재료 계량하기",
+     "- 계량 저울 위에 계량컵을 올리고 볶은 검은깨 50 g과 식물성 오일 10 g(포도씨유, 카놀라유 등 중성 오일 추천)을 차례대로 계량합니다.",
+     "(흑임자 5 : 오일 1)",
+     "1차 갈기",
+     "- 핸드블렌더를 이용해 굵게 갈아줍니다.",
+     "긁어모아 2차 갈기",
+     "- 블렌더 날이나 벽면에 붙은 재료를 스패출러로 싹싹 긁어모은 뒤, 안 갈아진 부분까지 마저 골고루 갈아줍니다.",
+     "- 반짝반짝한 질감이 되도록 완성합니다.",
+     "밀폐 및 보관하기",
+     "- 유리 용기에 완성된 페이스트를 담고 밀착 랩핑하여 공기를 완전히 차단해 줍니다."
+    ]
+   },
+   "updated_at": "2026-11-08T21:21:26",
+   "kind": "prep",
+   "category": "페이스트·앙금",
+   "yield_text": null,
+   "storage_method": "밀착 랩핑하여 공기 차단 후 냉장 또는 냉동 보관",
+   "storage_period": "냉장 7일 / 냉동 2~3개월",
+   "aliases": [],
+   "variants": [
+    {
+     "temperature": "PREP",
+     "size": null,
+     "status": "unset",
+     "label": "흑임자 페이스트 1회 분량 기준",
+     "ingredients": [
+      {
+       "name": "볶은 검은깨",
+       "amount": "50 g",
+       "aux": null,
+       "note": null,
+       "prep_id": null
+      },
+      {
+       "name": "식물성 오일",
+       "amount": "10 g",
+       "aux": null,
+       "note": null,
+       "prep_id": null
+      }
+     ]
+    }
+   ],
+   "used_in": [
+    {
+     "id": 8,
+     "menu_name": "흑임자라떼",
+     "kind": "menu",
+     "temperature": "ICED",
+     "size": "Small",
+     "name": "흑임자 페이스트",
+     "amount": "15 g",
+     "aux": null
+    }
+   ],
+   "photos": {},
+   "sizes": {
+    "HOT": [],
+    "ICED": []
+   },
+   "temperatures": "PREP",
+   "ingredient_names": [
+    "볶은 검은깨",
+    "식물성 오일"
+   ]
+  },
+  {
    "id": 6,
    "menu_name": "미숫가루",
    "channel": "유랄라TV",
