@@ -57,6 +57,225 @@
  ],
  "recipes": [
   {
+   "id": 2,
+   "menu_name": "달고나 카페 라떼",
+   "channel": "커픽처스 coffictures",
+   "source_url": "http://www.youtube.com/watch?v=WlUtv5LSw4Q",
+   "memo": "### 달고나 제조방법\n1. 냄비에 물과 설탕을 넣어준다.\n   - 저어주실 필요는 없으며 중불로 끓여줍니다.\n2. 설탕이 다 녹고 끓기 시작할 때까지 기다린다.\n   - 투명한 색에서 카라멜 색(노랗고 갈색빛)으로 변하며 거품이 커졌다가 잦아들 때까지 끓여줍니다.\n3. 베이킹소다를 넣고 빨리 저어준 뒤 불을 끈다.\n   - 베이킹소다를 넣은 후 계속 불에 올려두면 타므로 반드시 불에서 내려주거나 불을 꺼야 합니다.\n   - 위에 떠 있는 소다가 잘 섞이도록 빠르게 저어줍니다.\n4. 완성된 달고나를 부어 식힌 뒤 잘게 부셔준다.\n   - 식히는 데 약 1시간 정도 소요됩니다.\n   - 음료에 잘 녹고 비주얼이 좋도록 가루와 굵은 조각이 골고루 섞이도록 부셔줍니다.\n\n## 메모\n- 설탕, 베이킹소다, 물의 비율(200g : 10g : 100g)을 준수합니다.\n- 냄비 세척 시 물을 담가두거나 물을 받아 한번 끓여주면 달고나가 쉽게 녹아 쉽게 닦을 수 있습니다.\n- 사용 도구: 냄비, 주걱, 온도계(선택 사항, 170도~180도 도달 시 참고)\n\nYouTube 주소: https://youtu.be/WlUtv5LSw4Q",
+   "steps": {
+    "HOT": [],
+    "ICED": [
+     "잔에 얼음을 넣어 준다.",
+     "우유를 부어준다.",
+     "달고나 가루와 굵은 조각을 순서대로 넣어준다.",
+     "- 처음에는 빨리 녹고 비주얼이 좋도록 가루 위주로 넣고 윗부분은 굵은 달고나를 올려줍니다.",
+     "(달고나 커피의 경우) 에스프레소를 가장자리에 부어준다.",
+     "- 에스프레소를 달고나 위에 직접 부으면 금방 녹아 비주얼이 나빠지므로 가장자리로 흘려 부어줍니다."
+    ],
+    "UNKNOWN": [],
+    "PREP": []
+   },
+   "updated_at": "2026-11-09T18:28:03",
+   "kind": "menu",
+   "category": null,
+   "yield_text": null,
+   "storage_method": null,
+   "storage_period": null,
+   "aliases": [],
+   "variants": [
+    {
+     "temperature": "ICED",
+     "size": "Small",
+     "status": "confirmed",
+     "label": null,
+     "ingredients": [
+      {
+       "name": "얼음",
+       "amount": "150 g",
+       "aux": null,
+       "note": "잔에 채움",
+       "prep_id": null
+      },
+      {
+       "name": "우유",
+       "amount": "200 ml",
+       "aux": null,
+       "note": "일반 우유 사용 (원작 카페는 멸균우유 사용)",
+       "prep_id": null
+      },
+      {
+       "name": "달고나",
+       "amount": "30 g",
+       "aux": null,
+       "note": "가루 위주와 굵은 조각 혼합 토핑",
+       "prep_id": null
+      },
+      {
+       "name": "에스프레소",
+       "amount": "18 g",
+       "aux": "1 shot",
+       "note": "달고나 커피 제조 시 1 shot 추가",
+       "prep_id": null
+      }
+     ]
+    }
+   ],
+   "used_in": [],
+   "photos": {
+    "HOT": "photos/recipe-2-hot.jpg",
+    "ICED": "photos/recipe-2-iced.jpg"
+   },
+   "sizes": {
+    "HOT": [],
+    "ICED": [
+     "Small"
+    ]
+   },
+   "temperatures": "HOT,ICED",
+   "ingredient_names": [
+    "얼음",
+    "우유",
+    "달고나",
+    "에스프레소"
+   ]
+  },
+  {
+   "id": 1,
+   "menu_name": "바닐라 라떼",
+   "channel": "커피스토리",
+   "source_url": "https://youtu.be/tfKTHVQY-4E",
+   "memo": "- 도구: 머그컵, 18온스 유리잔, 스팀 피처, 샷잔, 디스트리뷰터, 탬퍼, 바 스푼, 모닌 바닐라 시럽 펌프\n- 원두가 강한 경우 시럽은 3펌프(30ml)로 늘려서 사용 가능합니다.\n- 화면 글자와 음성 설명이 일치하며, 1단계와 2단계의 구체적인 세부 팁들은 화면 자막을 기준으로 충실히 반영되었습니다.",
+   "steps": {
+    "HOT": [
+     "머그컵에 바닐라 시럽을 2펌프 담는다",
+     "- 모닌 펌프 기준 2펌프(20ml) 사용",
+     "- 기호에 따라 시럽의 양을 조절해주세요.",
+     "에스프레소 샷 추출하기 (2 shots)",
+     "- 디스트리뷰터를 사용하면 분쇄된 원두가 고르게 분배됩니다!",
+     "- 안정적인 탬핑을 위해 사용하는 것을 추천드려요!",
+     "- 샷을 시럽을 담은 컵에 바로 내리면 시간을 단축할 수 있어요!",
+     "에스프레소 샷과 시럽 섞어주기",
+     "- 뜨거운 샷에 시럽을 섞으면 시럽이 빨리 섞이고 향이 풍부해요!",
+     "- 나중에 시럽을 넣을 실 경우 반드시 스푼으로 충분히 섞어주세요!",
+     "우유 스팀하기",
+     "- 우유는 피처 코 밀까지! 두 번 공기 주입! 롤링 후 큰 거품 깨주기",
+     "라떼 아트 만들기 (에스프레소 샷과 우유 섞어주기)",
+     "- 컵에 담긴 에스프레소에 우유를 부어 섞고 라떼 아트를 완성합니다."
+    ],
+    "ICED": [
+     "컵에 얼음 담기",
+     "샷잔에 바닐라시럽 담기",
+     "- 모닌 펌프 기준 2펌프(20ml) 사용",
+     "- 기호에 따라 시럽의 양을 조절해주세요.",
+     "에스프레소 샷 추출하기(2 shots)",
+     "에스프레소 샷과 시럽 섞어주기",
+     "- 샷이 추출되면 뜨거운 상태에서 바로 시럽을 섞어주세요!",
+     "- 뜨거운 샷에 시럽을 섞으면 시럽이 빨리 섞이고 향이 풍부해요!",
+     "얼음이 담긴 잔에 우유 부어주기",
+     "우유가 담긴 잔에 시럽을 섞은 샷 부어주기",
+     "- 샷과 시럽을 먼저 넣고 그 위에 우유를 부어도 OK!",
+     "- 샷 대신 잔에 시럽을 넣고 샷을 추출해도 됩니다!",
+     "- 라떼와 다르게 시럽이 무거워 층이 지지 않고 금방 가라앉아요!"
+    ],
+    "UNKNOWN": [],
+    "PREP": []
+   },
+   "updated_at": "2026-11-09T18:27:06",
+   "kind": "menu",
+   "category": null,
+   "yield_text": null,
+   "storage_method": null,
+   "storage_period": null,
+   "aliases": [],
+   "variants": [
+    {
+     "temperature": "HOT",
+     "size": "Small",
+     "status": "confirmed",
+     "label": null,
+     "ingredients": [
+      {
+       "name": "바닐라 시럽",
+       "amount": "20 ml",
+       "aux": "2 pumps",
+       "note": "기호에 따라 조절",
+       "prep_id": null
+      },
+      {
+       "name": "에스프레소",
+       "amount": "36 g",
+       "aux": "2 shots",
+       "note": "투샷 추출",
+       "prep_id": null
+      },
+      {
+       "name": "우유",
+       "amount": null,
+       "aux": null,
+       "note": "벨벳 밀크 스팀",
+       "prep_id": null
+      }
+     ]
+    },
+    {
+     "temperature": "ICED",
+     "size": "Small",
+     "status": "confirmed",
+     "label": "18 온스",
+     "ingredients": [
+      {
+       "name": "얼음",
+       "amount": null,
+       "aux": null,
+       "note": "잔에 가득 채움",
+       "prep_id": null
+      },
+      {
+       "name": "바닐라 시럽",
+       "amount": "20 ml",
+       "aux": "2 pumps",
+       "note": "원두가 강하면 3 pumps(30ml)",
+       "prep_id": null
+      },
+      {
+       "name": "에스프레소",
+       "amount": "36 g",
+       "aux": "2 shots",
+       "note": "투샷 추출",
+       "prep_id": null
+      },
+      {
+       "name": "우유",
+       "amount": null,
+       "aux": null,
+       "note": "밀크 마스터 우유 사용",
+       "prep_id": null
+      }
+     ]
+    }
+   ],
+   "used_in": [],
+   "photos": {
+    "HOT": "photos/recipe-1-hot.jpg",
+    "ICED": "photos/recipe-1-iced.jpg"
+   },
+   "sizes": {
+    "HOT": [
+     "Small"
+    ],
+    "ICED": [
+     "Small"
+    ]
+   },
+   "temperatures": "HOT,ICED",
+   "ingredient_names": [
+    "바닐라 시럽",
+    "에스프레소",
+    "우유",
+    "얼음"
+   ]
+  },
+  {
    "id": 8,
    "menu_name": "흑임자라떼",
    "channel": "커픽처스 coffictures",
@@ -82,7 +301,7 @@
     "UNKNOWN": [],
     "PREP": []
    },
-   "updated_at": "2026-11-08T21:35:16",
+   "updated_at": "2026-11-09T18:26:37",
    "kind": "menu",
    "category": null,
    "yield_text": null,
@@ -133,8 +352,8 @@
       },
       {
        "name": "에스프레소",
-       "amount": "2 shots",
-       "aux": "36 ml",
+       "amount": "36 g",
+       "aux": "2 shots",
        "note": null,
        "prep_id": null
       }
@@ -159,6 +378,116 @@
     "얼음",
     "우유",
     "에스프레소"
+   ]
+  },
+  {
+   "id": 5,
+   "menu_name": "카페모카",
+   "channel": "유랄라TV",
+   "source_url": "https://youtu.be/xAGLEpxzAjY",
+   "memo": "- 도구: 유리컵, 계량컵, 스푼, 국자, 파우더 시커 등은 재료가 아니므로 메모에 기재함.\n- 수제크림 세는 단위는 영상에서 \"두국자\"로 표현되어 '2 scoops'로 매칭함.\n- 컵 크기 및 에스프레소 샷 수는 영상 화면에 구체적인 수치가 나오지 않아 '미확인'으로 처리함.\n- YouTube 주소: https://youtu.be/xAGLEpxzAjY",
+   "steps": {
+    "HOT": [],
+    "ICED": [
+     "초코소스를 유리컵에 넣기",
+     "- 초코소스 3펌프 (40g 정도) 유리컵에 넣어주시고 소스 위에 바로 뽑은 에스프레소를 섞어준다.",
+     "에스프레소 추출 및 소스 녹이기",
+     "- 소스를 에스프레소로 잘 녹여준다.",
+     "얼음과 우유 담기",
+     "- 컵에 얼음을 2/3 정도 채워주시고 우유 175ml를 부어준다.",
+     "음료 섞기",
+     "- 얼음과 우유가 섞여있는 컵에 잘 녹여준 소스와 에스프레소를 넣어 잘 섞어주고 그 위에 수제크림을 올려서 마무리.",
+     "크림 및 토핑 올리기",
+     "- 수제크림 올려서 마무리 :) 두국자 정도 넣어주시면 딱 좋아요!",
+     "- 초코 파우더 뿌려서 마무리 :) 더 단맛을 원하신다면 초코 소스를 드리블해 주시면 됩니다!"
+    ],
+    "UNKNOWN": [],
+    "PREP": []
+   },
+   "updated_at": "2026-11-09T18:26:10",
+   "kind": "menu",
+   "category": null,
+   "yield_text": null,
+   "storage_method": null,
+   "storage_period": null,
+   "aliases": [],
+   "variants": [
+    {
+     "temperature": "ICED",
+     "size": "Small",
+     "status": "confirmed",
+     "label": null,
+     "ingredients": [
+      {
+       "name": "초코소스",
+       "amount": "40 g",
+       "aux": "3 pumps",
+       "note": "기라델리 초코소스",
+       "prep_id": null
+      },
+      {
+       "name": "에스프레소",
+       "amount": "36 g",
+       "aux": "2 shots",
+       "note": "소스 위에 바로 추출",
+       "prep_id": null
+      },
+      {
+       "name": "얼음",
+       "amount": null,
+       "aux": null,
+       "note": "컵의 2/3 정도",
+       "prep_id": null
+      },
+      {
+       "name": "우유",
+       "amount": "175 ml",
+       "aux": null,
+       "note": "서울우유",
+       "prep_id": null
+      },
+      {
+       "name": "수제크림",
+       "amount": null,
+       "aux": "2 scoops",
+       "note": "두국자 정도",
+       "prep_id": 3
+      },
+      {
+       "name": "초코 파우더",
+       "amount": null,
+       "aux": null,
+       "note": "마무리용",
+       "prep_id": null
+      },
+      {
+       "name": "초코 소스",
+       "amount": null,
+       "aux": null,
+       "note": "더 단맛 원할 때 드리블",
+       "prep_id": null
+      }
+     ]
+    }
+   ],
+   "used_in": [],
+   "photos": {
+    "ICED": "photos/recipe-5-iced.jpg"
+   },
+   "sizes": {
+    "HOT": [],
+    "ICED": [
+     "Small"
+    ]
+   },
+   "temperatures": "ICED",
+   "ingredient_names": [
+    "초코소스",
+    "에스프레소",
+    "얼음",
+    "우유",
+    "수제크림",
+    "초코 파우더"
    ]
   },
   {
@@ -418,116 +747,6 @@
    ]
   },
   {
-   "id": 5,
-   "menu_name": "카페모카",
-   "channel": "유랄라TV",
-   "source_url": "https://youtu.be/xAGLEpxzAjY",
-   "memo": "- 도구: 유리컵, 계량컵, 스푼, 국자, 파우더 시커 등은 재료가 아니므로 메모에 기재함.\n- 수제크림 세는 단위는 영상에서 \"두국자\"로 표현되어 '2 scoops'로 매칭함.\n- 컵 크기 및 에스프레소 샷 수는 영상 화면에 구체적인 수치가 나오지 않아 '미확인'으로 처리함.\n- YouTube 주소: https://youtu.be/xAGLEpxzAjY",
-   "steps": {
-    "HOT": [],
-    "ICED": [
-     "초코소스를 유리컵에 넣기",
-     "- 초코소스 3펌프 (40g 정도) 유리컵에 넣어주시고 소스 위에 바로 뽑은 에스프레소를 섞어준다.",
-     "에스프레소 추출 및 소스 녹이기",
-     "- 소스를 에스프레소로 잘 녹여준다.",
-     "얼음과 우유 담기",
-     "- 컵에 얼음을 2/3 정도 채워주시고 우유 175ml를 부어준다.",
-     "음료 섞기",
-     "- 얼음과 우유가 섞여있는 컵에 잘 녹여준 소스와 에스프레소를 넣어 잘 섞어주고 그 위에 수제크림을 올려서 마무리.",
-     "크림 및 토핑 올리기",
-     "- 수제크림 올려서 마무리 :) 두국자 정도 넣어주시면 딱 좋아요!",
-     "- 초코 파우더 뿌려서 마무리 :) 더 단맛을 원하신다면 초코 소스를 드리블해 주시면 됩니다!"
-    ],
-    "UNKNOWN": [],
-    "PREP": []
-   },
-   "updated_at": "2026-11-06T22:08:15",
-   "kind": "menu",
-   "category": null,
-   "yield_text": null,
-   "storage_method": null,
-   "storage_period": null,
-   "aliases": [],
-   "variants": [
-    {
-     "temperature": "ICED",
-     "size": "Small",
-     "status": "confirmed",
-     "label": null,
-     "ingredients": [
-      {
-       "name": "초코소스",
-       "amount": "40 g",
-       "aux": "3 pumps",
-       "note": "기라델리 초코소스",
-       "prep_id": null
-      },
-      {
-       "name": "에스프레소",
-       "amount": null,
-       "aux": "2 shots",
-       "note": "소스 위에 바로 추출",
-       "prep_id": null
-      },
-      {
-       "name": "얼음",
-       "amount": null,
-       "aux": null,
-       "note": "컵의 2/3 정도",
-       "prep_id": null
-      },
-      {
-       "name": "우유",
-       "amount": "175 ml",
-       "aux": null,
-       "note": "서울우유",
-       "prep_id": null
-      },
-      {
-       "name": "수제크림",
-       "amount": null,
-       "aux": "2 scoops",
-       "note": "두국자 정도",
-       "prep_id": 3
-      },
-      {
-       "name": "초코 파우더",
-       "amount": null,
-       "aux": null,
-       "note": "마무리용",
-       "prep_id": null
-      },
-      {
-       "name": "초코 소스",
-       "amount": null,
-       "aux": null,
-       "note": "더 단맛 원할 때 드리블",
-       "prep_id": null
-      }
-     ]
-    }
-   ],
-   "used_in": [],
-   "photos": {
-    "ICED": "photos/recipe-5-iced.jpg"
-   },
-   "sizes": {
-    "HOT": [],
-    "ICED": [
-     "Small"
-    ]
-   },
-   "temperatures": "ICED",
-   "ingredient_names": [
-    "초코소스",
-    "에스프레소",
-    "얼음",
-    "우유",
-    "수제크림",
-    "초코 파우더"
-   ]
-  },
-  {
    "id": 4,
    "menu_name": "아인슈페너",
    "channel": "유랄라TV",
@@ -629,225 +848,6 @@
     "물",
     "수제크림",
     "초코 파우더"
-   ]
-  },
-  {
-   "id": 1,
-   "menu_name": "바닐라 라떼",
-   "channel": "커피스토리",
-   "source_url": "https://youtu.be/tfKTHVQY-4E",
-   "memo": "- 도구: 머그컵, 18온스 유리잔, 스팀 피처, 샷잔, 디스트리뷰터, 탬퍼, 바 스푼, 모닌 바닐라 시럽 펌프\n- 원두가 강한 경우 시럽은 3펌프(30ml)로 늘려서 사용 가능합니다.\n- 화면 글자와 음성 설명이 일치하며, 1단계와 2단계의 구체적인 세부 팁들은 화면 자막을 기준으로 충실히 반영되었습니다.",
-   "steps": {
-    "HOT": [
-     "머그컵에 바닐라 시럽을 2펌프 담는다",
-     "- 모닌 펌프 기준 2펌프(20ml) 사용",
-     "- 기호에 따라 시럽의 양을 조절해주세요.",
-     "에스프레소 샷 추출하기 (2 shots)",
-     "- 디스트리뷰터를 사용하면 분쇄된 원두가 고르게 분배됩니다!",
-     "- 안정적인 탬핑을 위해 사용하는 것을 추천드려요!",
-     "- 샷을 시럽을 담은 컵에 바로 내리면 시간을 단축할 수 있어요!",
-     "에스프레소 샷과 시럽 섞어주기",
-     "- 뜨거운 샷에 시럽을 섞으면 시럽이 빨리 섞이고 향이 풍부해요!",
-     "- 나중에 시럽을 넣을 실 경우 반드시 스푼으로 충분히 섞어주세요!",
-     "우유 스팀하기",
-     "- 우유는 피처 코 밀까지! 두 번 공기 주입! 롤링 후 큰 거품 깨주기",
-     "라떼 아트 만들기 (에스프레소 샷과 우유 섞어주기)",
-     "- 컵에 담긴 에스프레소에 우유를 부어 섞고 라떼 아트를 완성합니다."
-    ],
-    "ICED": [
-     "컵에 얼음 담기",
-     "샷잔에 바닐라시럽 담기",
-     "- 모닌 펌프 기준 2펌프(20ml) 사용",
-     "- 기호에 따라 시럽의 양을 조절해주세요.",
-     "에스프레소 샷 추출하기(2 shots)",
-     "에스프레소 샷과 시럽 섞어주기",
-     "- 샷이 추출되면 뜨거운 상태에서 바로 시럽을 섞어주세요!",
-     "- 뜨거운 샷에 시럽을 섞으면 시럽이 빨리 섞이고 향이 풍부해요!",
-     "얼음이 담긴 잔에 우유 부어주기",
-     "우유가 담긴 잔에 시럽을 섞은 샷 부어주기",
-     "- 샷과 시럽을 먼저 넣고 그 위에 우유를 부어도 OK!",
-     "- 샷 대신 잔에 시럽을 넣고 샷을 추출해도 됩니다!",
-     "- 라떼와 다르게 시럽이 무거워 층이 지지 않고 금방 가라앉아요!"
-    ],
-    "UNKNOWN": [],
-    "PREP": []
-   },
-   "updated_at": "2026-11-05T19:14:01",
-   "kind": "menu",
-   "category": null,
-   "yield_text": null,
-   "storage_method": null,
-   "storage_period": null,
-   "aliases": [],
-   "variants": [
-    {
-     "temperature": "HOT",
-     "size": "Small",
-     "status": "confirmed",
-     "label": null,
-     "ingredients": [
-      {
-       "name": "바닐라 시럽",
-       "amount": "20 ml",
-       "aux": "2 pumps",
-       "note": "기호에 따라 조절",
-       "prep_id": null
-      },
-      {
-       "name": "에스프레소",
-       "amount": null,
-       "aux": "2 shots",
-       "note": "투샷 추출",
-       "prep_id": null
-      },
-      {
-       "name": "우유",
-       "amount": null,
-       "aux": null,
-       "note": "벨벳 밀크 스팀",
-       "prep_id": null
-      }
-     ]
-    },
-    {
-     "temperature": "ICED",
-     "size": "Small",
-     "status": "confirmed",
-     "label": "18 온스",
-     "ingredients": [
-      {
-       "name": "얼음",
-       "amount": null,
-       "aux": null,
-       "note": "잔에 가득 채움",
-       "prep_id": null
-      },
-      {
-       "name": "바닐라 시럽",
-       "amount": "20 ml",
-       "aux": "2 pumps",
-       "note": "원두가 강하면 3 pumps(30ml)",
-       "prep_id": null
-      },
-      {
-       "name": "에스프레소",
-       "amount": null,
-       "aux": "2 shots",
-       "note": "투샷 추출",
-       "prep_id": null
-      },
-      {
-       "name": "우유",
-       "amount": null,
-       "aux": null,
-       "note": "밀크 마스터 우유 사용",
-       "prep_id": null
-      }
-     ]
-    }
-   ],
-   "used_in": [],
-   "photos": {
-    "HOT": "photos/recipe-1-hot.jpg",
-    "ICED": "photos/recipe-1-iced.jpg"
-   },
-   "sizes": {
-    "HOT": [
-     "Small"
-    ],
-    "ICED": [
-     "Small"
-    ]
-   },
-   "temperatures": "HOT,ICED",
-   "ingredient_names": [
-    "바닐라 시럽",
-    "에스프레소",
-    "우유",
-    "얼음"
-   ]
-  },
-  {
-   "id": 2,
-   "menu_name": "달고나 카페 라떼",
-   "channel": "커픽처스 coffictures",
-   "source_url": "http://www.youtube.com/watch?v=WlUtv5LSw4Q",
-   "memo": "### 달고나 제조방법\n1. 냄비에 물과 설탕을 넣어준다.\n   - 저어주실 필요는 없으며 중불로 끓여줍니다.\n2. 설탕이 다 녹고 끓기 시작할 때까지 기다린다.\n   - 투명한 색에서 카라멜 색(노랗고 갈색빛)으로 변하며 거품이 커졌다가 잦아들 때까지 끓여줍니다.\n3. 베이킹소다를 넣고 빨리 저어준 뒤 불을 끈다.\n   - 베이킹소다를 넣은 후 계속 불에 올려두면 타므로 반드시 불에서 내려주거나 불을 꺼야 합니다.\n   - 위에 떠 있는 소다가 잘 섞이도록 빠르게 저어줍니다.\n4. 완성된 달고나를 부어 식힌 뒤 잘게 부셔준다.\n   - 식히는 데 약 1시간 정도 소요됩니다.\n   - 음료에 잘 녹고 비주얼이 좋도록 가루와 굵은 조각이 골고루 섞이도록 부셔줍니다.\n\n## 메모\n- 설탕, 베이킹소다, 물의 비율(200g : 10g : 100g)을 준수합니다.\n- 냄비 세척 시 물을 담가두거나 물을 받아 한번 끓여주면 달고나가 쉽게 녹아 쉽게 닦을 수 있습니다.\n- 사용 도구: 냄비, 주걱, 온도계(선택 사항, 170도~180도 도달 시 참고)\n\nYouTube 주소: https://youtu.be/WlUtv5LSw4Q",
-   "steps": {
-    "HOT": [],
-    "ICED": [
-     "잔에 얼음을 넣어 준다.",
-     "우유를 부어준다.",
-     "달고나 가루와 굵은 조각을 순서대로 넣어준다.",
-     "- 처음에는 빨리 녹고 비주얼이 좋도록 가루 위주로 넣고 윗부분은 굵은 달고나를 올려줍니다.",
-     "(달고나 커피의 경우) 에스프레소를 가장자리에 부어준다.",
-     "- 에스프레소를 달고나 위에 직접 부으면 금방 녹아 비주얼이 나빠지므로 가장자리로 흘려 부어줍니다."
-    ],
-    "UNKNOWN": [],
-    "PREP": []
-   },
-   "updated_at": "2026-11-05T18:47:38",
-   "kind": "menu",
-   "category": null,
-   "yield_text": null,
-   "storage_method": null,
-   "storage_period": null,
-   "aliases": [],
-   "variants": [
-    {
-     "temperature": "ICED",
-     "size": "Small",
-     "status": "confirmed",
-     "label": null,
-     "ingredients": [
-      {
-       "name": "얼음",
-       "amount": "150g",
-       "aux": null,
-       "note": "잔에 채움",
-       "prep_id": null
-      },
-      {
-       "name": "우유",
-       "amount": "200ml",
-       "aux": null,
-       "note": "일반 우유 사용 (원작 카페는 멸균우유 사용)",
-       "prep_id": null
-      },
-      {
-       "name": "달고나",
-       "amount": "30g",
-       "aux": null,
-       "note": "가루 위주와 굵은 조각 혼합 토핑",
-       "prep_id": null
-      },
-      {
-       "name": "에스프레소",
-       "amount": "30ml (1oz)",
-       "aux": "1 shot",
-       "note": "달고나 커피 제조 시 1 shot 추가",
-       "prep_id": null
-      }
-     ]
-    }
-   ],
-   "used_in": [],
-   "photos": {
-    "HOT": "photos/recipe-2-hot.jpg",
-    "ICED": "photos/recipe-2-iced.jpg"
-   },
-   "sizes": {
-    "HOT": [],
-    "ICED": [
-     "Small"
-    ]
-   },
-   "temperatures": "HOT,ICED",
-   "ingredient_names": [
-    "얼음",
-    "우유",
-    "달고나",
-    "에스프레소"
    ]
   }
  ]
