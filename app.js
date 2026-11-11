@@ -922,6 +922,8 @@ function batchSlot(variant) {
   };
 }
 
+// Column widths: 분량 and 보조 at 20% keep "1,000 ml" and "10 scoops" on one line on an iPhone 15 Pro;
+// 비고 takes the rest and may wrap.
 function batchTable(readonly) {
   const batches = state.recipe.variants.filter((v) => v.temperature === "PREP");
   const slots = batches.length ? batches.map(batchSlot) : [batchSlot(null)];
@@ -940,8 +942,8 @@ function batchTable(readonly) {
   });
   return h("table", { class: "sizes" },
     h("colgroup", {},
-      h("col", { style: "width:25%" }), h("col", { style: "width:19%" }),
-      h("col", { style: "width:30%" }), h("col"), readonly ? null : h("col", { style: "width:24px" })),
+      h("col", { style: "width:25%" }), h("col", { style: "width:20%" }),
+      h("col", { style: "width:20%" }), h("col"), readonly ? null : h("col", { style: "width:24px" })),
     h("tbody", {}, rows));
 }
 
@@ -1101,8 +1103,8 @@ function sizeTable(temperature, readonly) {
   });
   return h("table", { class: "sizes" },
     h("colgroup", {},
-      h("col", { style: "width:25%" }), h("col", { style: "width:19%" }),
-      h("col", { style: "width:30%" }), h("col"), readonly ? null : h("col", { style: "width:24px" })),
+      h("col", { style: "width:25%" }), h("col", { style: "width:20%" }),
+      h("col", { style: "width:20%" }), h("col"), readonly ? null : h("col", { style: "width:24px" })),
     h("tbody", {}, rows));
 }
 
@@ -1464,7 +1466,9 @@ function memoArea(readonly) {
 
 const FORMAT_STYLES = [["bold", "굵게"], ["mark", "형광펜"], ["big", "크게"], ["small", "작게"]];
 const FORMAT_COLORS = [["red", "빨강"], ["yellow", "노랑"], ["blue", "파랑"], ["green", "초록"], ["orange", "주황"], ["purple", "보라"]];
-const FORMAT_SYMBOLS = ["½", "⅓", "⅔", "¼", "¾", "×", "÷", "±", "≈", "→", "℃", "°", "~", "·"];
+// In groups: fractions, sums and comparisons, temperature, arrows, marks for notes.
+const FORMAT_SYMBOLS = ["½", "⅓", "⅔", "¼", "¾", "⅛", "×", "÷", "±", "≈", "≤", "≥", "~", "℃", "℉", "°",
+  "→", "↑", "↓", "·", "※", "✓", "★"];
 
 function writer(options) {
   const editor = richBox(options);

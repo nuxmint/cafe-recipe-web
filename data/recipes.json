@@ -83,7 +83,7 @@
     "UNKNOWN": [],
     "PREP": []
    },
-   "updated_at": "2026-11-11T15:14:53",
+   "updated_at": "2026-11-11T15:34:10",
    "kind": "menu",
    "category": null,
    "yield_text": null,
@@ -130,7 +130,7 @@
        "name": "물",
        "amount": "160 g",
        "aux": null,
-       "note": "1대 4 비율",
+       "note": "1 : 4 비율",
        "prep_id": null
       },
       {
@@ -162,6 +162,111 @@
     "따뜻한 물",
     "물",
     "얼음"
+   ]
+  },
+  {
+   "id": 8,
+   "menu_name": "흑임자 라떼",
+   "channel": "커픽처스 coffictures",
+   "source_url": "https://youtu.be/Eh-IPC-Ni4Q",
+   "memo": "- 도구: 저울, 계량컵, 거품기(또는 핸드믹서), 유리잔\n- 추가 정보: 빨대를 사용하기보다 아이슈페너처럼 컵째로 마시는 것이 더 맛있습니다.",
+   "steps": {
+    "HOT": [],
+    "ICED": [
+     "계량컵에 생크림 100ml를 넣습니다.",
+     "- 생크림이나 동물성 휘핑크림 둘 중 하나를 사용합니다.",
+     "설탕시럽 20g을 넣습니다.",
+     "- 단것을 좋아하시는 분은 시럽을 30에서 40ml 넣어주세요.",
+     "흑임자 페이스트 15g을 넣습니다.",
+     "- 흑임자 페이스트 대신에 흑임자 가루를 사용하셔도 됩니다.",
+     "거품기(또는 수량이 많을 때는 핸드믹서)로 섞어 흑임자 크림을 만듭니다.",
+     "- 수량이 많을 때는 핸드믹서를 사용하면 편해요.",
+     "- 농도 조절이 중요해요! 요플레 같은 정도보다 약간 무른 정도로 쳐줍니다.",
+     "컵에 얼음 150g을 담습니다.",
+     "우유 150g을 담습니다.",
+     "만들어둔 흑임자 크림을 컵에 붓습니다.",
+     "에스프레소 2샷을 위에 부어 완성합니다."
+    ],
+    "UNKNOWN": [],
+    "PREP": []
+   },
+   "updated_at": "2026-11-11T15:16:13",
+   "kind": "menu",
+   "category": null,
+   "yield_text": null,
+   "storage_method": null,
+   "storage_period": null,
+   "aliases": [],
+   "variants": [
+    {
+     "temperature": "ICED",
+     "size": "Small",
+     "status": "confirmed",
+     "label": "14 oz",
+     "ingredients": [
+      {
+       "name": "생크림",
+       "amount": "100 ml",
+       "aux": null,
+       "note": "생크림이나 동물성 휘핑크림 둘 중 선택",
+       "prep_id": null
+      },
+      {
+       "name": "설탕시럽",
+       "amount": "20 g",
+       "aux": null,
+       "note": "단물을 좋아하시는 분은 30에서 40g으로 조절 가능",
+       "prep_id": null
+      },
+      {
+       "name": "흑임자 페이스트",
+       "amount": "15 g",
+       "aux": null,
+       "note": "흑임자 가루로 대체 가능",
+       "prep_id": 7
+      },
+      {
+       "name": "얼음",
+       "amount": "150 g",
+       "aux": null,
+       "note": null,
+       "prep_id": null
+      },
+      {
+       "name": "우유",
+       "amount": "150 g",
+       "aux": null,
+       "note": null,
+       "prep_id": null
+      },
+      {
+       "name": "에스프레소",
+       "amount": "40 g",
+       "aux": "2 shots",
+       "note": null,
+       "prep_id": null
+      }
+     ]
+    }
+   ],
+   "used_in": [],
+   "photos": {
+    "ICED": "photos/recipe-8-iced.jpg"
+   },
+   "sizes": {
+    "HOT": [],
+    "ICED": [
+     "Small"
+    ]
+   },
+   "temperatures": "ICED",
+   "ingredient_names": [
+    "생크림",
+    "설탕시럽",
+    "흑임자 페이스트",
+    "얼음",
+    "우유",
+    "에스프레소"
    ]
   },
   {
@@ -503,111 +608,6 @@
     "아이스크림",
     "에스프레소",
     "코코아 파우더"
-   ]
-  },
-  {
-   "id": 8,
-   "menu_name": "흑임자 라떼",
-   "channel": "커픽처스 coffictures",
-   "source_url": "https://youtu.be/Eh-IPC-Ni4Q",
-   "memo": "- 도구: 저울, 계량컵, 거품기(또는 핸드믹서), 유리잔\n- 추가 정보: 빨대를 사용하기보다 아이슈페너처럼 컵째로 마시는 것이 더 맛있습니다.",
-   "steps": {
-    "HOT": [],
-    "ICED": [
-     "계량컵에 생크림 100ml를 넣습니다.",
-     "- 생크림이나 동물성 휘핑크림 둘 중 하나를 사용합니다.",
-     "설탕시럽 20g을 넣습니다.",
-     "- 단것을 좋아하시는 분은 시럽을 30에서 40ml 넣어주세요.",
-     "흑임자 페이스트 15g을 넣습니다.",
-     "- 흑임자 페이스트 대신에 흑임자 가루를 사용하셔도 됩니다.",
-     "거품기(또는 수량이 많을 때는 핸드믹서)로 섞어 흑임자 크림을 만듭니다.",
-     "- 수량이 많을 때는 핸드믹서를 사용하면 편해요.",
-     "- 농도 조절이 중요해요! 요플레 같은 정도보다 약간 무른 정도로 쳐줍니다.",
-     "컵에 얼음 150g을 담습니다.",
-     "우유 150g을 담습니다.",
-     "만들어둔 흑임자 크림을 컵에 붓습니다.",
-     "에스프레소 2샷을 위에 부어 완성합니다."
-    ],
-    "UNKNOWN": [],
-    "PREP": []
-   },
-   "updated_at": "2026-11-09T21:54:00",
-   "kind": "menu",
-   "category": null,
-   "yield_text": null,
-   "storage_method": null,
-   "storage_period": null,
-   "aliases": [],
-   "variants": [
-    {
-     "temperature": "ICED",
-     "size": "Small",
-     "status": "suggested",
-     "label": "14 oz",
-     "ingredients": [
-      {
-       "name": "생크림",
-       "amount": "100 ml",
-       "aux": null,
-       "note": "생크림이나 동물성 휘핑크림 둘 중 선택",
-       "prep_id": null
-      },
-      {
-       "name": "설탕시럽",
-       "amount": "20 g",
-       "aux": null,
-       "note": "단물을 좋아하시는 분은 30에서 40g으로 조절 가능",
-       "prep_id": null
-      },
-      {
-       "name": "흑임자 페이스트",
-       "amount": "15 g",
-       "aux": null,
-       "note": "흑임자 가루로 대체 가능",
-       "prep_id": 7
-      },
-      {
-       "name": "얼음",
-       "amount": "150 g",
-       "aux": null,
-       "note": null,
-       "prep_id": null
-      },
-      {
-       "name": "우유",
-       "amount": "150 g",
-       "aux": null,
-       "note": null,
-       "prep_id": null
-      },
-      {
-       "name": "에스프레소",
-       "amount": "40 g",
-       "aux": "2 shots",
-       "note": null,
-       "prep_id": null
-      }
-     ]
-    }
-   ],
-   "used_in": [],
-   "photos": {
-    "ICED": "photos/recipe-8-iced.jpg"
-   },
-   "sizes": {
-    "HOT": [],
-    "ICED": [
-     "Small"
-    ]
-   },
-   "temperatures": "ICED",
-   "ingredient_names": [
-    "생크림",
-    "설탕시럽",
-    "흑임자 페이스트",
-    "얼음",
-    "우유",
-    "에스프레소"
    ]
   },
   {
