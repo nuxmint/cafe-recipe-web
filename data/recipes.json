@@ -25,8 +25,8 @@
   "ICED": [
    {
     "size": "Small",
-    "oz": 16.0,
-    "ml": 473.0
+    "oz": 14.0,
+    "ml": 414.0
    },
    {
     "size": "Medium",
@@ -56,6 +56,114 @@
   "토핑"
  ],
  "recipes": [
+  {
+   "id": 9,
+   "menu_name": "아메리카노",
+   "channel": "챔프형님",
+   "source_url": "http://www.youtube.com/watch?v=Di65AC9QTa0",
+   "memo": "- 도징 비율 1:2 / 30초 추출시간 ( ±3초: 27초 ~33초)\n- 물 -> 얼음 -> 에소프레소 vs. 물 -> 에소프레소 -> 얼음  : 둘의 방법의 맛이 완전 다름\n- 물의 온도 : 86 ~88도\n- ==원두 맛 조절 팁: 신맛이 강할 때는 도징량을 19g으로 줄이고(다운 도징), 쓴맛이 강할 때는 21g으로 늘립니다(업 도징)==.\n- 도구: 에스프레소 머신, 그라인더, 저울, 템퍼/레벨링 툴, 온수기, 제빙기, 10oz/13oz/14oz/16oz 테이크아웃 컵, 스푼 등\n- 바동선 설계 시 오더·픽업존, 커피 제조 파트, 베버리지 메이킹 파트의 구역을 확실히 설정하는 것이 중요합니다.",
+   "steps": {
+    "HOT": [
+     "* 10 fl oz 컵 *",
+     "20g의 커피 원두를 사용하여 에스프레소 30g(1.5샷)을 추출합니다.",
+     "10온스 컵에 86~88도의 따뜻한 물 230g을 담습니다.",
+     "추출한 에스프레소를 넣습니다.",
+     "- 13 온스 컵을 사용할 때는 물 300g, 에스프레소 40g (2 shots)을 사용합니다.",
+     "- {주황:**12 온스 컵**} : 물 280g, 에스프레소 40g (2 shots)을 사용.",
+     "- 기호에 따라 얼음 두 알을 넣으면 온도가 내려가 마시기 편해집니다."
+    ],
+    "ICED": [
+     "14온스 테이크아웃 컵에 물 160g을 담습니다. (14 fl oz - 1:4 비율 = 40g x 4 = 물 160g)",
+     "얼음을 넣습니다.",
+     "에스프레소 40g(투샷)을 부어줍니다.",
+     "잘 섞이도록 저어줍니다.",
+     "- 16온스 컵을 사용할 때는 물 180g(1:4.5 비율)과 에스프레소 투샷을 사용합니다.",
+     "- 에스프레소 샷을 먼저 넣고 물을 담은 뒤 얼음을 넣으면 크레마가 섞이면서 더 부드러운 질감을 냅니다."
+    ],
+    "UNKNOWN": [],
+    "PREP": []
+   },
+   "updated_at": "2026-11-11T15:14:53",
+   "kind": "menu",
+   "category": null,
+   "yield_text": null,
+   "storage_method": null,
+   "storage_period": null,
+   "aliases": [],
+   "variants": [
+    {
+     "temperature": "HOT",
+     "size": "Small",
+     "status": "confirmed",
+     "label": "10 oz",
+     "ingredients": [
+      {
+       "name": "에스프레소",
+       "amount": "40 g",
+       "aux": "2 shots",
+       "note": "챔피언 블렌드, 추출 시간 27~33초",
+       "prep_id": null
+      },
+      {
+       "name": "따뜻한 물",
+       "amount": "280 g",
+       "aux": null,
+       "note": "온도 86~88도",
+       "prep_id": null
+      }
+     ]
+    },
+    {
+     "temperature": "ICED",
+     "size": "Small",
+     "status": "confirmed",
+     "label": "14 oz",
+     "ingredients": [
+      {
+       "name": "에스프레소",
+       "amount": "40 g",
+       "aux": "2 shots",
+       "note": "챔피언 블렌드, 20g 도징, 1대 2 비율, 추출 시간 30초",
+       "prep_id": null
+      },
+      {
+       "name": "물",
+       "amount": "160 g",
+       "aux": null,
+       "note": "1대 4 비율",
+       "prep_id": null
+      },
+      {
+       "name": "얼음",
+       "amount": null,
+       "aux": null,
+       "note": "잔을 채우는 용도",
+       "prep_id": null
+      }
+     ]
+    }
+   ],
+   "used_in": [],
+   "photos": {
+    "HOT": "photos/recipe-9-hot.jpg",
+    "ICED": "photos/recipe-9-iced.jpg"
+   },
+   "sizes": {
+    "HOT": [
+     "Small"
+    ],
+    "ICED": [
+     "Small"
+    ]
+   },
+   "temperatures": "HOT,ICED",
+   "ingredient_names": [
+    "에스프레소",
+    "따뜻한 물",
+    "물",
+    "얼음"
+   ]
+  },
   {
    "id": 5,
    "menu_name": "카페 모카",
@@ -663,113 +771,6 @@
     "오렌지 농축액",
     "얼음",
     "코코아 파우더"
-   ]
-  },
-  {
-   "id": 9,
-   "menu_name": "아메리카노",
-   "channel": "챔프형님",
-   "source_url": "http://www.youtube.com/watch?v=Di65AC9QTa0",
-   "memo": "- 도징 비율 1:2 / 30초 추출시간 (27초 ~33초)\n- 물 -> 얼음 -> 에소프레소 vs. 물 -> 에소프레소 -> 얼음  : 둘의 방법의 맛이 완전 다름\n- 물의 온도 : 86 ~88도\n- 원두 맛 조절 팁: 신맛이 강할 때는 도징량을 19g으로 줄이고(다운 도징), 쓴맛이 강할 때는 21g으로 늘립니다(업 도징).\n- 도구: 에스프레소 머신, 그라인더, 저울, 템퍼/레벨링 툴, 온수기, 제빙기, 10oz/13oz/14oz/16oz 테이크아웃 컵, 스푼 등\n- 바동선 설계 시 오더·픽업존, 커피 제조 파트, 베버리지 메이킹 파트의 구역을 확실히 설정하는 것이 중요합니다.",
-   "steps": {
-    "HOT": [
-     "20g의 커피 원두를 사용하여 에스프레소 30g(1.5샷)을 추출합니다.",
-     "10온스 컵에 86~88도의 따뜻한 물 230g을 담습니다.",
-     "추출한 에스프레소를 넣습니다.",
-     "- 13온스 컵을 사용할 때는 물 300g, 에스프레소 40g (2 shots)을 사용합니다.",
-     "- 12 온스 컵 : 물 280g, 에스프레소 40g (2 shots)을 사용.",
-     "- 기호에 따라 얼음 두 알을 넣으면 온도가 내려가 마시기 편해집니다."
-    ],
-    "ICED": [
-     "14온스 테이크아웃 컵에 물 160g을 담습니다. (14 fl oz - 1:4 비율 = 40g x 4 = 물 160g)",
-     "얼음을 넣습니다.",
-     "에스프레소 40g(투샷)을 부어줍니다.",
-     "잘 섞이도록 저어줍니다.",
-     "- 16온스 컵을 사용할 때는 물 180g(1:4.5 비율)과 에스프레소 투샷을 사용합니다.",
-     "- 에스프레소 샷을 먼저 넣고 물을 담은 뒤 얼음을 넣으면 크레마가 섞이면서 더 부드러운 질감을 냅니다."
-    ],
-    "UNKNOWN": [],
-    "PREP": []
-   },
-   "updated_at": "2026-11-09T21:17:59",
-   "kind": "menu",
-   "category": null,
-   "yield_text": null,
-   "storage_method": null,
-   "storage_period": null,
-   "aliases": [],
-   "variants": [
-    {
-     "temperature": "HOT",
-     "size": "Small",
-     "status": "suggested",
-     "label": "10 oz",
-     "ingredients": [
-      {
-       "name": "에스프레소",
-       "amount": "30 g",
-       "aux": "1.5 shots",
-       "note": "챔피언 블렌드, 추출 시간 27~33초",
-       "prep_id": null
-      },
-      {
-       "name": "따뜻한 물",
-       "amount": "230 g",
-       "aux": null,
-       "note": "온도 86~88도",
-       "prep_id": null
-      }
-     ]
-    },
-    {
-     "temperature": "ICED",
-     "size": "Small",
-     "status": "suggested",
-     "label": "14 oz",
-     "ingredients": [
-      {
-       "name": "에스프레소",
-       "amount": "40 g",
-       "aux": "2 shots",
-       "note": "챔피언 블렌드, 20g 도징, 1대 2 비율, 추출 시간 30초",
-       "prep_id": null
-      },
-      {
-       "name": "물",
-       "amount": "160 g",
-       "aux": null,
-       "note": "1대 4 비율",
-       "prep_id": null
-      },
-      {
-       "name": "얼음",
-       "amount": null,
-       "aux": null,
-       "note": "잔을 채우는 용도",
-       "prep_id": null
-      }
-     ]
-    }
-   ],
-   "used_in": [],
-   "photos": {
-    "HOT": "photos/recipe-9-hot.jpg",
-    "ICED": "photos/recipe-9-iced.jpg"
-   },
-   "sizes": {
-    "HOT": [
-     "Small"
-    ],
-    "ICED": [
-     "Small"
-    ]
-   },
-   "temperatures": "HOT,ICED",
-   "ingredient_names": [
-    "에스프레소",
-    "따뜻한 물",
-    "물",
-    "얼음"
    ]
   },
   {

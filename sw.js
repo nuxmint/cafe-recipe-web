@@ -1,7 +1,7 @@
 // Built by publish.py. VERSION is a hash of the site files, so each release replaces the cached shell.
-const VERSION = 'recipe-1aaed213cfd6';
+const VERSION = 'recipe-c36a9e888041';
 const DATA_CACHE = 'recipe-data';
-const SHELL = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest", "icons/icon-180.png", "icons/icon-192.png", "icons/icon-512.png"];
+const SHELL = ["./", "index.html", "style.css", "rich-text.js", "app.js", "manifest.webmanifest", "icons/icon-180.png", "icons/icon-192.png", "icons/icon-512.png"];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
